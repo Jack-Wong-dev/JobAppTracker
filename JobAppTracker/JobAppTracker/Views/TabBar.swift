@@ -40,17 +40,18 @@ struct TabBar: View {
                         ZStack {
                             Image(systemName: tabItems.items[i].imageName)
                                 .resizable()
-                                .contentShape(Circle())
                                 .foregroundColor(Color.gray)
                                 .frame(width: iconSize, height: iconSize)
                                 .padding(.all, padding)
                                 .background(Color.white)
                                 .clipShape(Circle())
-                                .onTapGesture {
-                                    withAnimation(Animation.easeInOut) {
-                                        tabItems.select(i)
-                                    }
-                                }
+                               
+                        }
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            withAnimation(Animation.easeInOut) {
+                                tabItems.select(i)
+                            }
                         }
                         .offset(y: self.tabItems.items[i].offset)
                     }
