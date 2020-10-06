@@ -22,6 +22,8 @@
 		0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E1252D257200D3B5D9 /* Bar.swift */; };
 		0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */; };
 		0AF9C1E8252D25D000D3B5D9 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E7252D25D000D3B5D9 /* TabBarItems.swift */; };
+		0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */; };
+		0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		0AF9C1E1252D257200D3B5D9 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		0AF9C1E7252D25D000D3B5D9 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
+		0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
+		0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */,
+				0AF9C1EE252D2B4900D3B5D9 /* Repository */,
 				0AF9C1C4252D230600D3B5D9 /* Screens */,
 				0AF9C1C1252D22EB00D3B5D9 /* Models */,
 				0AF9C1C0252D22E600D3B5D9 /* Views */,
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0AF9C1E7252D25D000D3B5D9 /* TabBarItems.swift */,
+				0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +154,14 @@
 				0AF9C1E1252D257200D3B5D9 /* Bar.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		0AF9C1EE252D2B4900D3B5D9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */,
 				0AF9C1B3252D22DC00D3B5D9 /* ContentView.swift in Sources */,
 				0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */,
+				0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */,
 				0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */,
 				0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */,
 				0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */,

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ActiveApplicationsView: View {
+    
+    @StateObject var jobListVM = JobListViewModel()
+    
     var body: some View {
         
 //        NavigationView {

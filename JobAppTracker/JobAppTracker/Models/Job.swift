@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct Job: Identifiable {
-    let id = UUID()
-    let title: String
-    let companyName: String
-    let location: String
-    let appliedDate: String
-    let status: String
-    
+struct Job: Codable, Identifiable {
+//    @DocumentID var id: String?
+//    @ServerTimestamp var createdTime: Timestamp?
+    var id = UUID()
+    var title: String
+    var companyName: String
+    var location: String
+    var appliedDate: String
+    var status: String
 }
