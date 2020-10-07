@@ -10,11 +10,11 @@ import SwiftUI
 class TabItems: ObservableObject {
     
     @Published var items: [TabItem] = [
-        TabItem(imageName: "house", offset: -20),
-        TabItem(imageName: "magnifyingglass"),
-        TabItem(imageName: "plus.app"),
-        TabItem(imageName: "heart"),
-        TabItem(imageName: "person"),
+        TabItem(imageName: "house.fill", offset: -20, color: .systemGreen),
+        TabItem(imageName: "magnifyingglass", color: .systemPink),
+        TabItem(imageName: "plus.app.fill", color: .systemBlue),
+        TabItem(imageName: "heart.fill", color: .systemRed),
+        TabItem(imageName: "person.fill", color: .systemTeal),
     ]
     
     @Published var selectedTabIndex: CGFloat = 1

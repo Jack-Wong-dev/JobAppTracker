@@ -40,7 +40,7 @@ struct TabBar: View {
                         ZStack {
                             Image(systemName: tabItems.items[i].imageName)
                                 .resizable()
-                                .foregroundColor(Color.gray)
+                                .foregroundColor(getIconColor(i))
                                 .frame(width: iconSize, height: iconSize)
                                 .padding(.all, padding)
                                 .background(Color.solid)
@@ -73,5 +73,13 @@ struct TabBar: View {
     
     private func getStepperToNextCenter(_ geo: GeometryProxy) -> CGFloat {
         getSpacing(geo) + iconFrame
+    }
+    
+    private func getIconColor(_ i: Int) -> Color {
+        if tabItems.selectedTabIndex - 1.0 == CGFloat(i) {
+            return Color(tabItems.items[i].color)
+        } else {
+            return Color.gray
+        }
     }
 }

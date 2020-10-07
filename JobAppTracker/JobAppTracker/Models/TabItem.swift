@@ -11,12 +11,17 @@ class TabItem: Identifiable {
     let id = UUID()
     let imageName: String
     var offset: CGFloat = -5
+    var color: UIColor
     
-    init(imageName: String, offset: CGFloat) {
+    init(imageName: String, offset: CGFloat, color: UIColor) {
         self.imageName = imageName
         self.offset = offset
+        self.color = color
     }
-    init(imageName: String) {
+    
+    init(imageName: String, color: UIColor) {
         self.imageName = imageName
+        self.color = color
     }
 }
+
