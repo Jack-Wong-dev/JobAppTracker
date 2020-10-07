@@ -24,10 +24,10 @@ class JobRepository: ObservableObject {
         guard let userId = Auth.auth().currentUser?.uid else {
             return
         }
-
+        
         db.collection("jobs")
             .order(by: "createdTime")
-//            .whereField("userId", isEqualTo: userId)
+            .whereField("userId", isEqualTo: userId)
             .addSnapshotListener { (querySnapshot, error) in
                 if let querySnapshot = querySnapshot {
                     self.jobs = querySnapshot.documents.compactMap { document in
@@ -55,12 +55,24 @@ class JobRepository: ObservableObject {
     }
     
     func updateJob(_ job: Job)  {
-        if let jobID = job.id {
+        if let docId = job.id {
             do {
-                try db.collection("jobs").document(jobID).setData(from: job)
+                try db.collection("jobs").document(docId).setData(from: job)
             }
             catch {
                 fatalError("unable to encode task: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func deleteJob(_ job: Job) {
+        if let docId = job.id {
+            db.collection("jobs").document(docId).delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
             }
         }
     }

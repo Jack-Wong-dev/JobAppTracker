@@ -38,6 +38,7 @@ struct ActiveApplicationsView: View {
                     .resizable()
                     .frame(width: 100, height: 100)
             })
+            .modifier(Neumorphic())
             
             
             Spacer().frame(height: 70)
