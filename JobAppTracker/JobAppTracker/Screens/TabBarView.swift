@@ -27,19 +27,19 @@ struct TabBarView: View {
         case 2:
             Text("Search All Job Applications")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.offWhite)
+                .background(Color.background)
         case 3:
             Text("Add")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.offWhite)
+                .background(Color.background)
         case 4:
             Text("Favorite")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.offWhite)
+                .background(Color.background)
         case 5:
             Text("Profile")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.offWhite)
+                .background(Color.background)
         default:
             EmptyView()
         }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActiveApplicationsView: View {
     
-    @StateObject var jobListVM = JobListViewModel()
+//    @StateObject var jobListVM = jobsl
     
     var body: some View {
         
@@ -25,7 +25,7 @@ struct ActiveApplicationsView: View {
                 
                 Spacer().frame(height: 70)
             }
-            .background(Color.offWhite.ignoresSafeArea())
+            .background(Color.background.ignoresSafeArea())
 //        }
 //        .navigationViewStyle(StackNavigationViewStyle())
 

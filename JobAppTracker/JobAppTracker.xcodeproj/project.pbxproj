@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */; };
-		0AF9C1B3252D22DC00D3B5D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B2252D22DC00D3B5D9 /* ContentView.swift */; };
 		0AF9C1B5252D22DE00D3B5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */; };
 		0AF9C1B8252D22DE00D3B5D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */; };
 		0AF9C1C6252D232800D3B5D9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1C5252D232800D3B5D9 /* TabBarView.swift */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		0AF9C1AD252D22DC00D3B5D9 /* JobAppTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobAppTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAppTrackerApp.swift; sourceTree = "<group>"; };
-		0AF9C1B2252D22DC00D3B5D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0AF9C1B9252D22DE00D3B5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 				0AF9C1C0252D22E600D3B5D9 /* Views */,
 				0AF9C1C2252D22F400D3B5D9 /* ViewModels */,
 				0AF9C1CF252D239800D3B5D9 /* Other */,
-				0AF9C1B2252D22DC00D3B5D9 /* ContentView.swift */,
 				0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */,
 				0AF9C1B9252D22DE00D3B5D9 /* Info.plist */,
 				0AF9C1B6252D22DE00D3B5D9 /* Preview Content */,
@@ -234,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */,
-				0AF9C1B3252D22DC00D3B5D9 /* ContentView.swift in Sources */,
 				0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */,
 				0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */,
 				0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */,
