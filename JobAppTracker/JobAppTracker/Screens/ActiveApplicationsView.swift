@@ -12,19 +12,19 @@ struct ActiveApplicationsView: View {
     @ObservedObject var jobListVM = JobListViewModel()
     @State private var showSheet = false
     
-    @State private var columns = [GridItem(.adaptive(minimum: 200, maximum: 300), spacing: 16)]
+    @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 16)]
 
     var body: some View {
         
         ZStack(alignment: .bottomTrailing) {
             ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 16) {
                     ForEach(jobListVM.jobsList) { job in
                         JobCard(job: job)
-                            .frame(width: 300, height: 300)
+                            .frame(height: 300)
                     }
-                    
                 }
+                .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 Spacer().frame(height: 70)

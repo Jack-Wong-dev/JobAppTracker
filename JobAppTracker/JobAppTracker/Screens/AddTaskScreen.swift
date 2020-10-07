@@ -12,11 +12,11 @@ struct AddTaskScreen: View {
     @ObservedObject var jobListVM: JobListViewModel
     @Binding var showSheet: Bool
     
-    @State var title = ""
-    @State var company = ""
-    @State var location = ""
-    @State var appliedOn = ""
-    @State var status = ""
+    @State private var title = ""
+    @State private var company = ""
+    @State private var location = ""
+    @State private var applyDate = Date()
+    @State private var status = ""
     
     var body: some View {
         NavigationView {
@@ -24,7 +24,9 @@ struct AddTaskScreen: View {
                 TextField("Enter title", text: $title)
                 TextField("Enter Company", text: $company)
                 TextField("Enter Location", text: $location)
-                TextField("Enter Application Date", text:$appliedOn)
+                DatePicker("Application Date", selection: $applyDate, displayedComponents: .date)
+                    .accentColor(.purple)
+                    .datePickerStyle(CompactDatePickerStyle())
                 TextField("Enter Status", text:$status)
             }
             .navigationTitle("Add Job Application")
@@ -50,9 +52,9 @@ struct AddTaskScreen: View {
     
     private func submitPressed() {
         print("submit pressed")
-        
-        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: appliedOn, status: status))
-        
+
+        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status))
+
         showSheet = false
     }
     

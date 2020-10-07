@@ -25,7 +25,7 @@ struct JobCard: View {
                 RingView(width: 60, height: 60)
             }
             
-            Text("Applied on: \(job.appliedDate)")
+            Text("Applied on: \(job.appliedDate.toString(.medium))")
                 .font(Font.caption.weight(.semibold))
             
             Text("Status: \(job.status)")

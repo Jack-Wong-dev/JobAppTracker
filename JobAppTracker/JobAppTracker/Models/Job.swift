@@ -16,7 +16,7 @@ struct Job: Codable, Identifiable {
     var title: String
     var companyName: String
     var location: String
-    var appliedDate: String
+    var appliedDate: Date
     var status: String
 }
 
