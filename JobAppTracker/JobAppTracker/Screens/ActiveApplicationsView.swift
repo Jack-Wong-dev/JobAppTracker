@@ -13,7 +13,7 @@ struct ActiveApplicationsView: View {
     @State private var showSheet = false
     
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 16)]
-
+    
     var body: some View {
         
         ZStack(alignment: .bottomTrailing) {
@@ -22,6 +22,9 @@ struct ActiveApplicationsView: View {
                     ForEach(jobListVM.jobsList) { job in
                         JobCard(job: job)
                             .frame(height: 300)
+                            .onTapGesture() {
+                                jobListVM.selectedJob = job
+                            }
                     }
                 }
                 .padding()
@@ -30,20 +33,24 @@ struct ActiveApplicationsView: View {
                 Spacer().frame(height: 70)
             }
             .sheet(isPresented: $showSheet, content: {
-                AddTaskScreen(jobListVM: jobListVM, showSheet: $showSheet)
+                AddJobAppScreen(jobListVM: jobListVM, showSheet: $showSheet)
             })
             
             VStack {
                 Button(action: {
-                   showSheet = true
+                    showSheet = true
                 }, label: {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
                         .foregroundColor(Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
-                        .frame(width: 32, height: 32)
+                        .frame(width: 56, height: 56)
                         .padding(.horizontal)
                 })
                 Spacer().frame(height: 70)
+            }
+            
+            if let jobToShow = jobListVM.selectedJob {
+                DetailScreen(job: jobToShow, jobListVM: jobListVM)
             }
         }
     }
@@ -60,3 +67,15 @@ struct ActiveApplicationsView_Previews: PreviewProvider {
 }
 
 
+struct ModalView: View {
+    @Environment(\.presentationMode) var presentationMode
+    var body: some View {
+        Button("Dismiss") {
+            presentationMode.wrappedValue.dismiss()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.red)
+        .foregroundColor(Color.white)
+        .edgesIgnoringSafeArea(.all)
+    }
+}

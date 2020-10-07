@@ -21,12 +21,13 @@ struct Job: Codable, Identifiable {
 }
 
 #if DEBUG
-//let jobData = [
-//    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-//    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-//    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-//    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-//    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-//    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-//]
+let jobData = [
+    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: Date(), status: "Applied"),
+    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: Date(), status: "Applied"),
+    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: Date(), status: "Applied"),
+    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: Date(), status: "Applied"),
+    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: Date(), status: "Applied"),
+    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: Date(), status: "Applied"),
+]
 #endif
+

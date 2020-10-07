@@ -12,6 +12,7 @@ class JobListViewModel: ObservableObject {
     
     @Published var jobRepository = JobRepository()
     @Published var jobsList = [Job]()
+    @Published var selectedJob: Job? = nil
     
     private var cancellables = Set<AnyCancellable>()
 //    @Published var job =
@@ -24,6 +25,10 @@ class JobListViewModel: ObservableObject {
     
     func addJob(job: Job) {
         jobRepository.addJob(job)
+    }
+    
+    func deleteJob(job: Job) {
+        jobRepository.deleteJob(job)
     }
 }
 

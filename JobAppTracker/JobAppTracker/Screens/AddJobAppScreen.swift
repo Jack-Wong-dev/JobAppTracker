@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddTaskScreen: View {
+struct AddJobAppScreen: View {
     
     @ObservedObject var jobListVM: JobListViewModel
     @Binding var showSheet: Bool
@@ -63,4 +63,5 @@ struct AddTaskScreen: View {
         showSheet = false
     }
 }
+
 
