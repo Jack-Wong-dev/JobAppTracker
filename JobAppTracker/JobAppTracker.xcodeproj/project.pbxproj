@@ -23,6 +23,7 @@
 		0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */; };
 		0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */; };
 		0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */; };
+		0AF9C1F7252D535600D3B5D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
+		0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		0AF9C1AF252D22DC00D3B5D9 /* JobAppTracker */ = {
 			isa = PBXGroup;
 			children = (
+				0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */,
 				0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */,
 				0AF9C1EE252D2B4900D3B5D9 /* Repository */,
 				0AF9C1C4252D230600D3B5D9 /* Screens */,
@@ -220,6 +223,7 @@
 			files = (
 				0AF9C1B8252D22DE00D3B5D9 /* Preview Assets.xcassets in Resources */,
 				0AF9C1B5252D22DE00D3B5D9 /* Assets.xcassets in Resources */,
+				0AF9C1F7252D535600D3B5D9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
