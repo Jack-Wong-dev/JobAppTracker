@@ -21,31 +21,36 @@ struct ActiveApplicationsView: View {
     
     var body: some View {
         
-        ScrollView(showsIndicators: false) {
-            LazyVStack(spacing: 16) {
-                ForEach(jobListVM.jobsList) { job in
-                    JobCard(job: job)
-                        .frame(width: 300, height: 300)
+        ZStack(alignment: .bottomTrailing) {
+            ScrollView(showsIndicators: false) {
+                LazyVStack(spacing: 16) {
+                    ForEach(jobListVM.jobsList) { job in
+                        JobCard(job: job)
+                            .frame(width: 300, height: 300)
+                    }
+                    
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
+                Spacer().frame(height: 70)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
-            Button(action: {
-               showSheet = true
-            }, label: {
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .frame(width: 100, height: 100)
+            .sheet(isPresented: $showSheet, content: {
+                AddTaskScreen(jobListVM: jobListVM, showSheet: $showSheet)
             })
-            .modifier(Neumorphic())
             
-            
-            Spacer().frame(height: 70)
+            VStack {
+                Button(action: {
+                   showSheet = true
+                }, label: {
+                    Image(systemName: "plus.circle.fill")
+                        .resizable()
+                        .foregroundColor(Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
+                        .frame(width: 32, height: 32)
+                })
+                .padding(.horizontal)
+                Spacer().frame(height: 70)
+            }
         }
-        .sheet(isPresented: $showSheet, content: {
-            AddTaskScreen(jobListVM: jobListVM, showSheet: $showSheet)
-        })
     }
 }
 
