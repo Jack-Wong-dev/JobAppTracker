@@ -8,18 +8,57 @@
 import SwiftUI
 
 struct AddTaskScreen: View {
+    
+    @ObservedObject var jobListVM: JobListViewModel
+    @Binding var showSheet: Bool
+    
+    @State var title = ""
+    @State var company = ""
+    @State var location = ""
+    @State var appliedOn = ""
+    @State var status = ""
+    
     var body: some View {
-        VStack {
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("Button")
+        NavigationView {
+            Form {
+                TextField("Enter title", text: $title)
+                TextField("Enter Company", text: $company)
+                TextField("Enter Location", text: $location)
+                TextField("Enter Application Date", text:$appliedOn)
+                TextField("Enter Status", text:$status)
+            }
+            .navigationTitle("Add Job Application")
+            .toolbar(content: {
+                ToolbarItem(placement: ToolbarItemPlacement.cancellationAction) {
+                    Button(action: {
+                        cancelPressed()
+                    }, label: {
+                        Text("Cancel")
+                    })
+                }
+                
+                ToolbarItem(placement: ToolbarItemPlacement.confirmationAction) {
+                    Button(action: {
+                        submitPressed()
+                    }, label: {
+                        Text("Submit")
+                    })
+                }
             })
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+    
+    private func submitPressed() {
+        print("submit pressed")
+        
+        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: appliedOn, status: status))
+        
+        showSheet = false
+    }
+    
+    private func cancelPressed() {
+        print("cancel pressed")
+        showSheet = false
     }
 }
 
-struct AddTaskScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        AddTaskScreen()
-    }
-}

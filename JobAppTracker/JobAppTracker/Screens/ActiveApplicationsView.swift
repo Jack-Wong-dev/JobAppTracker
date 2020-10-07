@@ -10,6 +10,14 @@ import SwiftUI
 struct ActiveApplicationsView: View {
     
     @ObservedObject var jobListVM = JobListViewModel()
+    @State var showSheet = false
+    
+    
+    @State var title = ""
+    @State var company = ""
+    @State var location = ""
+    @State var appliedOn = ""
+    @State var status = ""
     
     var body: some View {
         
@@ -24,8 +32,7 @@ struct ActiveApplicationsView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
             Button(action: {
-                print("button pressed")
-                jobListVM.addJob(job: Job(title: "iOS Developer", companyName: "Facebook", location: "New York", appliedDate: "10/17/2020", status: "Applied"))
+               showSheet = true
             }, label: {
                 Image(systemName: "plus.circle.fill")
                     .resizable()
@@ -35,6 +42,9 @@ struct ActiveApplicationsView: View {
             
             Spacer().frame(height: 70)
         }
+        .sheet(isPresented: $showSheet, content: {
+            AddTaskScreen(jobListVM: jobListVM, showSheet: $showSheet)
+        })
     }
 }
 
