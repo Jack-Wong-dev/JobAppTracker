@@ -20,7 +20,7 @@
 		0AF9C1DD252D252000D3B5D9 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1DC252D252000D3B5D9 /* TabBar.swift */; };
 		0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E1252D257200D3B5D9 /* Bar.swift */; };
 		0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */; };
-		0AF9C1E8252D25D000D3B5D9 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E7252D25D000D3B5D9 /* TabBarItems.swift */; };
+		0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */; };
 		0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */; };
 		0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 		0AF9C1DC252D252000D3B5D9 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		0AF9C1E1252D257200D3B5D9 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		0AF9C1E7252D25D000D3B5D9 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
+		0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,7 +121,7 @@
 		0AF9C1C2252D22F400D3B5D9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0AF9C1E7252D25D000D3B5D9 /* TabBarItems.swift */,
+				0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */,
 				0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -238,7 +238,7 @@
 				0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */,
 				0AF9C1DA252D242700D3B5D9 /* RingView.swift in Sources */,
 				0AF9C1CA252D235500D3B5D9 /* ActiveApplicationsView.swift in Sources */,
-				0AF9C1E8252D25D000D3B5D9 /* TabBarItems.swift in Sources */,
+				0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */,
 				0AF9C1C6252D232800D3B5D9 /* TabBarView.swift in Sources */,
 				0AF9C1D7252D241200D3B5D9 /* JobCard.swift in Sources */,
 				0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */,
