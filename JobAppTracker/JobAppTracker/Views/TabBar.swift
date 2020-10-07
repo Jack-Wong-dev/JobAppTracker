@@ -45,6 +45,7 @@ struct TabBar: View {
                                 .padding(.all, padding)
                                 .background(Color.solid)
                                 .clipShape(Circle())
+                            
                                
                         }
                         .contentShape(Rectangle())

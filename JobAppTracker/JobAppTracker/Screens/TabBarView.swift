@@ -17,6 +17,7 @@ struct TabBarView: View {
             
             TabBar(tabItems: tabItems)
         }
+        .background(Color.background.ignoresSafeArea())
     }
     
     @ViewBuilder
@@ -25,9 +26,7 @@ struct TabBarView: View {
         case 1:
             ActiveApplicationsView()
         case 2:
-            Text("Search All Job Applications")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.background)
+            SearchScreen()
         case 3:
             Text("Add")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

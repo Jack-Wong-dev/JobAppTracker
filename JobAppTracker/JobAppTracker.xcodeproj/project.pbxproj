@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */; };
+		0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */; };
+		0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */; };
+		0A1A264E252D7A36009BDDB9 /* AddTaskScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264D252D7A36009BDDB9 /* AddTaskScreen.swift */; };
 		0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */; };
 		0AF9C1B5252D22DE00D3B5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */; };
 		0AF9C1B8252D22DE00D3B5D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
+		0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifier.swift; sourceTree = "<group>"; };
+		0A1A264D252D7A36009BDDB9 /* AddTaskScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskScreen.swift; sourceTree = "<group>"; };
 		0AF9C1AD252D22DC00D3B5D9 /* JobAppTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobAppTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAppTrackerApp.swift; sourceTree = "<group>"; };
 		0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +151,8 @@
 			children = (
 				0AF9C1C5252D232800D3B5D9 /* TabBarView.swift */,
 				0AF9C1C9252D235500D3B5D9 /* ActiveApplicationsView.swift */,
+				0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */,
+				0A1A264D252D7A36009BDDB9 /* AddTaskScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 			children = (
 				0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */,
 				0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */,
+				0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -308,6 +317,7 @@
 				0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */,
 				0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */,
 				0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */,
+				0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */,
 				0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */,
 				0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */,
 				0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */,
@@ -316,6 +326,8 @@
 				0AF9C1CA252D235500D3B5D9 /* ActiveApplicationsView.swift in Sources */,
 				0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */,
 				0AF9C1C6252D232800D3B5D9 /* TabBarView.swift in Sources */,
+				0A1A264E252D7A36009BDDB9 /* AddTaskScreen.swift in Sources */,
+				0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */,
 				0AF9C1D7252D241200D3B5D9 /* JobCard.swift in Sources */,
 				0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */,
 				0AF9C1CD252D237800D3B5D9 /* Job.swift in Sources */,

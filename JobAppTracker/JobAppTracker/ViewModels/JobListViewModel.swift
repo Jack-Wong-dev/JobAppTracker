@@ -6,14 +6,24 @@
 //
 
 import SwiftUI
+import Combine
 
 class JobListViewModel: ObservableObject {
     
     @Published var jobRepository = JobRepository()
+    @Published var jobsList = [Job]()
+    
+    private var cancellables = Set<AnyCancellable>()
 //    @Published var job =
     
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    init() {
+        jobRepository.$jobs
+            .assign(to: \.jobsList, on: self)
+            .store(in: &cancellables)
+    }
+    
+    func addJob(job: Job) {
+        jobRepository.addJob(job)
     }
 }
 

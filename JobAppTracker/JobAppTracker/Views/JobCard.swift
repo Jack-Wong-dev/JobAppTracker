@@ -34,15 +34,15 @@ struct JobCard: View {
             Spacer()
         }
         .padding()
-        .modifier(Neumorphic())
+        .modifier(NeumorphicGreedy())
     }
 }
 
-struct JobCard_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            JobCard(job: jobData[0])
-                .frame(width: 200, height: 200)
-        }
-    }
-}
+//struct JobCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VStack {
+//            JobCard(job: jobData[0])
+//                .frame(width: 200, height: 200)
+//        }
+//    }
+//}

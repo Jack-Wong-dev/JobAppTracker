@@ -5,12 +5,14 @@
 //  Created by Jack Wong on 10/6/20.
 //
 
-import SwiftUI
-//firestore modules goes here
+import Foundation
+import Firebase
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class JobRepository: ObservableObject {
     
-    //TODO:  firestore goes here
+    let db = Firestore.firestore()
     
     @Published var jobs = [Job]()
     
@@ -19,14 +21,47 @@ class JobRepository: ObservableObject {
     }
     
     func loadData()  {
-        //TODO: Implement Load data method
+        guard let userId = Auth.auth().currentUser?.uid else {
+            return
+        }
+
+        db.collection("jobs")
+            .order(by: "createdTime")
+//            .whereField("userId", isEqualTo: userId)
+            .addSnapshotListener { (querySnapshot, error) in
+                if let querySnapshot = querySnapshot {
+                    self.jobs = querySnapshot.documents.compactMap { document in
+                        do {
+                            let x = try document.data(as: Job.self)
+                            return x
+                        } catch {
+                            print(error)
+                        }
+                        return nil
+                    }
+                }
+            }
     }
     
     func addJob(_ job: Job)  {
-        //TODO: Implement add job method
+        do {
+            var addedJob = job
+            addedJob.userId = Auth.auth().currentUser?.uid
+            let _ = try db.collection("jobs").addDocument(from: addedJob)
+        }
+        catch {
+            fatalError("unable to encode task: \(error.localizedDescription)")
+        }
     }
     
     func updateJob(_ job: Job)  {
-        //TODO: Implement update job method
+        if let jobID = job.id {
+            do {
+                try db.collection("jobs").document(jobID).setData(from: job)
+            }
+            catch {
+                fatalError("unable to encode task: \(error.localizedDescription)")
+            }
+        }
     }
 }

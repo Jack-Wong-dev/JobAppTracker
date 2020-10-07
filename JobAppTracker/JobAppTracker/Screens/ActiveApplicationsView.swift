@@ -9,42 +9,43 @@ import SwiftUI
 
 struct ActiveApplicationsView: View {
     
-//    @StateObject var jobListVM = jobsl
+    @ObservedObject var jobListVM = JobListViewModel()
     
     var body: some View {
         
-//        NavigationView {
-            ScrollView(showsIndicators: false) {
-                LazyVStack(spacing: 16) {
-                    ForEach(jobData) { job in
-                        JobCard(job: job)
-                            .frame(width: 300, height: 300)
-                    }
+        ScrollView(showsIndicators: false) {
+            LazyVStack(spacing: 16) {
+                ForEach(jobListVM.jobsList) { job in
+                    JobCard(job: job)
+                        .frame(width: 300, height: 300)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
-                Spacer().frame(height: 70)
             }
-            .background(Color.background.ignoresSafeArea())
-//        }
-//        .navigationViewStyle(StackNavigationViewStyle())
-
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            Button(action: {
+                print("button pressed")
+                jobListVM.addJob(job: Job(title: "iOS Developer", companyName: "Facebook", location: "New York", appliedDate: "10/17/2020", status: "Applied"))
+            }, label: {
+                Image(systemName: "plus.circle.fill")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            })
+            
+            
+            Spacer().frame(height: 70)
+        }
     }
 }
 
 struct ActiveApplicationsView_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveApplicationsView()
-            .previewDevice("iPhone 11 Pro")
+        VStack {
+            ActiveApplicationsView()
+        }
+        .background(Color.background.ignoresSafeArea())
+        .previewDevice("iPhone 11 Pro")
     }
 }
 
 
-let jobData = [
-    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-    Job(title: "iOS Engineer", companyName: "Snap", location: "New York", appliedDate: "Jun 25, 2020", status: "Applied"),
-]
