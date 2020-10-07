@@ -10,20 +10,15 @@ import SwiftUI
 struct ActiveApplicationsView: View {
     
     @ObservedObject var jobListVM = JobListViewModel()
-    @State var showSheet = false
+    @State private var showSheet = false
     
-    
-    @State var title = ""
-    @State var company = ""
-    @State var location = ""
-    @State var appliedOn = ""
-    @State var status = ""
-    
+    @State private var columns = [GridItem(.adaptive(minimum: 200, maximum: 300), spacing: 16)]
+
     var body: some View {
         
         ZStack(alignment: .bottomTrailing) {
             ScrollView(showsIndicators: false) {
-                LazyVStack(spacing: 16) {
+                LazyVGrid(columns: columns) {
                     ForEach(jobListVM.jobsList) { job in
                         JobCard(job: job)
                             .frame(width: 300, height: 300)
@@ -46,8 +41,8 @@ struct ActiveApplicationsView: View {
                         .resizable()
                         .foregroundColor(Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
                         .frame(width: 32, height: 32)
+                        .padding(.horizontal)
                 })
-                .padding(.horizontal)
                 Spacer().frame(height: 70)
             }
         }
