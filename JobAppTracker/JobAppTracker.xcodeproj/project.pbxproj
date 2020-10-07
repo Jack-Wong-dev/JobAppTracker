@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */; };
 		0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */; };
 		0AF9C1B5252D22DE00D3B5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */; };
 		0AF9C1B8252D22DE00D3B5D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */; };
@@ -24,9 +25,11 @@
 		0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */; };
 		0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */; };
 		0AF9C1F7252D535600D3B5D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */; };
+		3E521AC7F32F2EBCB9F61165 /* Pods_JobAppTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B9F632D610A5BD4C866D95 /* Pods_JobAppTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
 		0AF9C1AD252D22DC00D3B5D9 /* JobAppTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobAppTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAppTrackerApp.swift; sourceTree = "<group>"; };
 		0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
 		0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4C7B6D77E730C699D63781D8 /* Pods-JobAppTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobAppTracker.debug.xcconfig"; path = "Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		CB610FDBE1139892F3240045 /* Pods-JobAppTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobAppTracker.release.xcconfig"; path = "Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker.release.xcconfig"; sourceTree = "<group>"; };
+		D9B9F632D610A5BD4C866D95 /* Pods_JobAppTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobAppTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E521AC7F32F2EBCB9F61165 /* Pods_JobAppTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +71,8 @@
 			children = (
 				0AF9C1AF252D22DC00D3B5D9 /* JobAppTracker */,
 				0AF9C1AE252D22DC00D3B5D9 /* Products */,
+				BE1BDCE9781E57A77183DE6B /* Pods */,
+				AD4F1C6334EDA17C2CF13443 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,8 +87,8 @@
 		0AF9C1AF252D22DC00D3B5D9 /* JobAppTracker */ = {
 			isa = PBXGroup;
 			children = (
-				0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */,
 				0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */,
+				0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */,
 				0AF9C1EE252D2B4900D3B5D9 /* Repository */,
 				0AF9C1C4252D230600D3B5D9 /* Screens */,
 				0AF9C1C1252D22EB00D3B5D9 /* Models */,
@@ -88,6 +97,7 @@
 				0AF9C1CF252D239800D3B5D9 /* Other */,
 				0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */,
 				0AF9C1B9252D22DE00D3B5D9 /* Info.plist */,
+				0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */,
 				0AF9C1B6252D22DE00D3B5D9 /* Preview Content */,
 			);
 			path = JobAppTracker;
@@ -164,6 +174,23 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		AD4F1C6334EDA17C2CF13443 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9B9F632D610A5BD4C866D95 /* Pods_JobAppTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE1BDCE9781E57A77183DE6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C7B6D77E730C699D63781D8 /* Pods-JobAppTracker.debug.xcconfig */,
+				CB610FDBE1139892F3240045 /* Pods-JobAppTracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AF9C1BC252D22DE00D3B5D9 /* Build configuration list for PBXNativeTarget "JobAppTracker" */;
 			buildPhases = (
+				0C1595055E75ABF3861757ED /* [CP] Check Pods Manifest.lock */,
 				0AF9C1A9252D22DC00D3B5D9 /* Sources */,
 				0AF9C1AA252D22DC00D3B5D9 /* Frameworks */,
 				0AF9C1AB252D22DC00D3B5D9 /* Resources */,
+				32D972D8C4E23A3882A1BB7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +258,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C1595055E75ABF3861757ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JobAppTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32D972D8C4E23A3882A1BB7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AF9C1A9252D22DC00D3B5D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -241,6 +312,7 @@
 				0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */,
 				0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */,
 				0AF9C1DA252D242700D3B5D9 /* RingView.swift in Sources */,
+				0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */,
 				0AF9C1CA252D235500D3B5D9 /* ActiveApplicationsView.swift in Sources */,
 				0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */,
 				0AF9C1C6252D232800D3B5D9 /* TabBarView.swift in Sources */,
@@ -372,6 +444,7 @@
 		};
 		0AF9C1BD252D22DE00D3B5D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C7B6D77E730C699D63781D8 /* Pods-JobAppTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -394,6 +467,7 @@
 		};
 		0AF9C1BE252D22DE00D3B5D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB610FDBE1139892F3240045 /* Pods-JobAppTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

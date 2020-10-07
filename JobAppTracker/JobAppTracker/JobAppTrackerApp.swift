@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct JobAppTrackerApp: App {
+    @UIApplicationDelegateAdaptor(MyAppDelegate.self) var appDelegate
+    @Environment(\.scenePhase) var scenePhase
+    
     var body: some Scene {
         WindowGroup {
             TabBarView()
