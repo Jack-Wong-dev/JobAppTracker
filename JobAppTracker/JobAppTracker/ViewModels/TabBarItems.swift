@@ -11,7 +11,7 @@ class TabItems: ObservableObject {
     
     @Published var items: [TabItem] = [
         TabItem(imageName: "house.fill", offset: -20, color: .systemGreen),
-        TabItem(imageName: "magnifyingglass", color: .systemPink),
+        TabItem(imageName: "magnifyingglass", color: .systemPurple),
         TabItem(imageName: "plus.app.fill", color: .systemBlue),
         TabItem(imageName: "heart.fill", color: .systemRed),
         TabItem(imageName: "person.fill", color: .systemTeal),

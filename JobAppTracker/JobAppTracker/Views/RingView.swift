@@ -38,12 +38,10 @@ struct RingView: View {
                 .frame(width: width, height: height)
                 .shadow(color: Color(color2).opacity(0.1), radius: 3 * multipler, x: 0, y: 3 * multipler)
             
-//            Text("\(Int(percent))%")
-//                .font(.system(size: 14 * multipler))
-//                .fontWeight(.bold)
-//                .onTapGesture {
-//                    show.toggle()
-//                }
+            Text("\(Int(percent))%")
+                .font(.system(size: 14 * multipler))
+                .fontWeight(.bold)
+
         }
     }
 }
