@@ -33,6 +33,7 @@ struct AddJobAppScreen: View {
                     .datePickerStyle(CompactDatePickerStyle())
                 TextField("Enter Status", text:$status)
             }
+            .autocapitalization(.none)
             .navigationTitle("Add Job Application")
             .toolbar(content: {
                 ToolbarItem(placement: ToolbarItemPlacement.cancellationAction) {
