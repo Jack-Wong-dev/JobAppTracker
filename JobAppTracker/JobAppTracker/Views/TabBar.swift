@@ -25,12 +25,12 @@ struct TabBar: View {
                 Bar(tabItems: tabItems,
                     firstCenter: getFirstCenter(geo),
                     stepperToNextCenter: getStepperToNextCenter(geo))
-                    .foregroundColor(Color.lighting)
+                    .foregroundColor(Color.systemBackground)
                     .frame(width: geo.size.width, height: 50)
                     .background(
                         VStack {
                             Color.clear
-                            Color.lighting.ignoresSafeArea()
+                            Color.systemBackground.ignoresSafeArea()
                         }
                     )
                 
@@ -43,7 +43,7 @@ struct TabBar: View {
                                 .foregroundColor(getIconColor(i))
                                 .frame(width: iconSize, height: iconSize)
                                 .padding(.all, padding)
-                                .background(Color.lighting)
+                                .background(Color.systemBackground)
                                 .clipShape(Circle())
                             
                                
