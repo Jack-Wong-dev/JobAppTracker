@@ -17,6 +17,10 @@ struct AddJobAppScreen: View {
     @State private var location = ""
     @State private var applyDate = Date()
     @State private var status = ""
+    @State private var remote = false
+    @State private var url = ""
+    @State private var notes = ""
+    
     
     var body: some View {
         NavigationView {

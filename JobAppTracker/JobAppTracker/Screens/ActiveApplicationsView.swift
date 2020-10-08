@@ -12,16 +12,16 @@ struct ActiveApplicationsView: View {
     @ObservedObject var jobListVM = JobListViewModel()
     @State private var showSheet = false
     
-    @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 16)]
+    @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
     
     var body: some View {
         
         ZStack(alignment: .bottomTrailing) {
             ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: columns, spacing: 16) {
+                LazyVGrid(columns: columns, spacing: 40) {
                     ForEach(jobListVM.jobsList) { job in
                         JobCard(job: job)
-                            .frame(height: 300)
+                            .frame(height: 200)
                             .onTapGesture() {
                                 jobListVM.selectedJob = job
                             }

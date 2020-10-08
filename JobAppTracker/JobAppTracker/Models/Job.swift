@@ -16,8 +16,21 @@ struct Job: Codable, Identifiable {
     var title: String
     var companyName: String
     var location: String
+    var url = ""
     var appliedDate: Date
     var status: String
+    var remote = false
+    var salary = ""
+    var notes = ""
+}
+
+
+class JobViewModel: ObservableObject {
+    
+    
+    init() {
+        
+    }
 }
 
 #if DEBUG
