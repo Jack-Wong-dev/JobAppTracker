@@ -1,7 +1,11 @@
 # JobAppTracker
 
 ## Todos
-* <strike>Implement Dark Mode<strike>
-* <strike>Implement Neumorphic Design across the entire app<strike>
-* <strike>Create animated custom tabbar<strike>
-*  Firebase setup
+* <strike>Implement Dark Mode</strike>
+* <strike>Neumorphic Design on the cards</strike>
+* <strike>Create animated custom tabbar</strike>
+* <strike>Firebase setup</strike>
+* <strike>Anonymous sign in</strike>
+* Implement ability to transition from anoymous to permanent
+* Finish all CRUD implementation
+
