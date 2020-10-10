@@ -25,14 +25,6 @@ struct Job: Codable, Identifiable {
 }
 
 
-class JobViewModel: ObservableObject {
-    
-    
-    init() {
-        
-    }
-}
-
 #if DEBUG
 let jobData = [
     Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),

@@ -16,11 +16,19 @@ struct JobCard: View {
                 VStack(alignment: .leading) {
                     Text(job.title)
                         .font(.title2).bold()
+                    
                     Text(job.companyName)
-                        .font(Font.headline.weight(.semibold))
+                        .font(Font.headline.weight(.bold))
+                    
                     Text(job.location)
-                        .font(Font.subheadline.weight(.semibold))
+                        .font(Font.headline.weight(.semibold))
+                    
+                    if job.remote { Text("Remote") }
+                    
+                    if !job.salary.isEmpty { Text("Salary: \(job.salary)") }
                 }
+                .font(Font.subheadline.weight(.semibold))
+                
                 Spacer()
                 RingView(width: 60, height: 60)
             }
@@ -47,3 +55,4 @@ struct JobCard: View {
 //        }
 //    }
 //}
+

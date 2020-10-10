@@ -10,57 +10,62 @@ import SwiftUI
 struct DetailScreen: View {
     let job: Job
     @ObservedObject var jobListVM: JobListViewModel
-    @State private var edit = false
     @State private var showingAlert = false
     
     var body: some View {
         
-        ZStack(alignment: .bottom) {
-            VStack() {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(job.title)
-                            .font(.title2).bold()
-                        Text(job.companyName)
-                            .font(Font.headline.weight(.semibold))
-                        Text(job.location)
-                            .font(Font.subheadline.weight(.semibold))
+        
+        //TODO: Decide on fullscreen or nagivation stack for update view
+        
+        NavigationView {
+            ZStack(alignment: .bottom) {
+                VStack() {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(job.title)
+                                .font(.title2).bold()
+                            Text(job.companyName)
+                                .font(Font.headline.weight(.semibold))
+                            Text(job.location)
+                                .font(Font.subheadline.weight(.semibold))
+                        }
+                        Spacer()
+                        RingView(width: 60, height: 60)
                     }
+                    
+                    Text("Applied on: \(job.appliedDate.toString(.medium))")
+                        .font(Font.caption.weight(.semibold))
+                    
+                    Text("Status: \(job.status)")
+                        .font(Font.callout.weight(.semibold))
+                    
+                    if job.remote == true {
+                        Text("Remote: \(job.remote.description)")
+                    }
+                    
+                    if !job.salary.isEmpty {
+                        Text(job.salary)
+                            .font(Font.body.weight(.semibold))
+                    }
+                    
+                    if !job.notes.isEmpty {
+                        Text(job.notes)
+                            .font(Font.body.weight(.semibold))
+                    }
+                    
                     Spacer()
-                    RingView(width: 60, height: 60)
+                    
                 }
                 
-                Text("Applied on: \(job.appliedDate.toString(.medium))")
-                    .font(Font.caption.weight(.semibold))
+                floatingActionButtons
                 
-                Text("Status: \(job.status)")
-                    .font(Font.callout.weight(.semibold))
-                
-                if job.remote == true {
-                    Text("Remote: \(job.remote.description)")
-                }
-                
-                if !job.salary.isEmpty {
-                    Text(job.salary)
-                        .font(Font.body.weight(.semibold))
-                }
-                
-                if !job.notes.isEmpty {
-                    Text(job.notes)
-                        .font(Font.body.weight(.semibold))
-                }
-                
-                Spacer()
-
             }
-            
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.background.ignoresSafeArea())
+            .navigationBarHidden(true)
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.background.ignoresSafeArea())
-        
-        
-        floatingActionButtons
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     
@@ -104,13 +109,22 @@ struct DetailScreen: View {
                 //MARK: - Edit Button
                 Button {
                     print("edit button pressed")
-                    edit = true
+                    jobListVM.intent = .update
                 } label: {
                     Image(systemName: "pencil.circle.fill")
                         .resizable()
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
                 }
+                
+//                NavigationLink(
+//                    destination: UpdateView(),
+//                    label: {
+//                        Image(systemName: "pencil.circle.fill")
+//                            .resizable()
+//                            .frame(width: 56, height: 56)
+//                            .foregroundColor(Color.orange)
+//                    })
             }
             .padding(.horizontal)
             
@@ -124,4 +138,15 @@ struct DetailScreen: View {
         jobListVM.selectedJob = nil
     }
     
+}
+
+struct UpdateView: View {
+    var body: some View {
+        VStack {
+            Color.red.ignoresSafeArea()
+        }
+        .navigationTitle("Update")
+        .navigationBarTitleDisplayMode(.inline)
+        
+    }
 }

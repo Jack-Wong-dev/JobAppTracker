@@ -69,7 +69,7 @@ struct AddJobAppScreen: View {
     private func submitPressed() {
         print("submit pressed")
 
-        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status, remote: false, url: url, salary: salary, notes: notes))
+        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status, remote: remote, url: url, salary: salary, notes: notes))
         
         presentationMode.wrappedValue.dismiss()
     }
