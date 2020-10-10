@@ -28,10 +28,11 @@ struct JobCard: View {
             Text("Applied on: \(job.appliedDate.toString(.medium))")
                 .font(Font.caption.weight(.semibold))
             
+            Spacer()
+            
             Text("Status: \(job.status)")
                 .font(Font.callout.weight(.semibold))
             
-            Spacer()
         }
         .padding()
         .modifier(NeumorphicGreedy())

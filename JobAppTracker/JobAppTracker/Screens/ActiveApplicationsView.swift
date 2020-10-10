@@ -10,9 +10,9 @@ import SwiftUI
 struct ActiveApplicationsView: View {
     
     @StateObject var jobListVM = JobListViewModel()
-    @State private var showSheet = false
     
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
+    @State var yes = true
         
     var body: some View {
         
@@ -35,7 +35,7 @@ struct ActiveApplicationsView: View {
             
             VStack {
                 Button(action: {
-                    showSheet = true
+                    jobListVM.intent = .create
                 }, label: {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -50,10 +50,14 @@ struct ActiveApplicationsView: View {
                 DetailScreen(job: jobToShow, jobListVM: jobListVM)
             }
         }
-        .fullScreenCover(isPresented: $showSheet, content: {
-            AddJobAppScreen(jobListVM: jobListVM, showSheet: $showSheet)
-        })
-
+        .fullScreenCover(item: $jobListVM.intent) { intent in
+            switch intent {
+            case .create:
+                AddJobAppScreen(jobListVM: jobListVM)
+            case .update:
+                Color.red
+            }
+        }
     }
 }
 

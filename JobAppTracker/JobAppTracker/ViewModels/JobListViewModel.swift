@@ -8,11 +8,18 @@
 import SwiftUI
 import Combine
 
+enum UserIntent: Int, Identifiable {
+    var id: Int { self.rawValue }
+    case create
+    case update
+}
+
 class JobListViewModel: ObservableObject {
     
     @Published var jobRepository = JobRepository()
     @Published var jobsList = [Job]()
     @Published var selectedJob: Job? = nil
+    @Published var intent: UserIntent? = nil
     
     private var cancellables = Set<AnyCancellable>()
 //    @Published var job =

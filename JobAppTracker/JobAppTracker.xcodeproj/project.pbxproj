@@ -11,6 +11,7 @@
 		0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */; };
 		0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */; };
 		0A1A264E252D7A36009BDDB9 /* AddJobAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */; };
+		0A4CD23D2531712900E3B728 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */; };
 		0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B826252E5AF80021593B /* Date-Extension.swift */; };
 		0AB5B82A252E5DFF0021593B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B829252E5DFF0021593B /* DetailScreen.swift */; };
 		0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */; };
@@ -38,6 +39,7 @@
 		0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifier.swift; sourceTree = "<group>"; };
 		0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobAppScreen.swift; sourceTree = "<group>"; };
+		0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		0AB5B826252E5AF80021593B /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		0AB5B829252E5DFF0021593B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		0AF9C1AD252D22DC00D3B5D9 /* JobAppTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobAppTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4CD23B2531711500E3B728 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		0AF9C1A4252D22DC00D3B5D9 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		0AF9C1C0252D22E600D3B5D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A4CD23B2531711500E3B728 /* Style */,
 				0AF9C1DF252D253500D3B5D9 /* Shapes */,
 				0AF9C1D6252D241200D3B5D9 /* JobCard.swift */,
 				0AF9C1D9252D242700D3B5D9 /* RingView.swift */,
@@ -331,6 +342,7 @@
 				0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */,
 				0AF9C1DA252D242700D3B5D9 /* RingView.swift in Sources */,
 				0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */,
+				0A4CD23D2531712900E3B728 /* CheckboxToggleStyle.swift in Sources */,
 				0AF9C1CA252D235500D3B5D9 /* ActiveApplicationsView.swift in Sources */,
 				0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */,
 				0AF9C1C6252D232800D3B5D9 /* TabBarView.swift in Sources */,

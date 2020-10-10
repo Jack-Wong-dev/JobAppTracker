@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct AddJobAppScreen: View {
+    @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var jobListVM: JobListViewModel
-    @Binding var showSheet: Bool
     
     @State private var title = ""
     @State private var company = ""
@@ -19,6 +19,7 @@ struct AddJobAppScreen: View {
     @State private var status = ""
     @State private var remote = false
     @State private var url = ""
+    @State private var salary = ""
     @State private var notes = ""
     
     
@@ -31,7 +32,17 @@ struct AddJobAppScreen: View {
                 DatePicker("Application Date", selection: $applyDate, displayedComponents: .date)
                     .accentColor(.purple)
                     .datePickerStyle(CompactDatePickerStyle())
+                Toggle(isOn: $remote, label: {
+                    Text("Remote")
+                })
+                .toggleStyle(CheckboxToggleStyle())
                 TextField("Enter Status", text:$status)
+                TextField("URL (Optional)", text: $url)
+                TextField("Salary (Optional)", text: $salary)
+
+                Section(header: Text("Notes")) {
+                    TextEditor(text: $notes)
+                }
             }
             .autocapitalization(.none)
             .navigationTitle("Add Job Application")
@@ -58,15 +69,13 @@ struct AddJobAppScreen: View {
     private func submitPressed() {
         print("submit pressed")
 
-        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status))
-
-        showSheet = false
+        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status, remote: false, url: url, salary: salary, notes: notes))
+        
+        presentationMode.wrappedValue.dismiss()
     }
     
     private func cancelPressed() {
         print("cancel pressed")
-        showSheet = false
+        presentationMode.wrappedValue.dismiss()
     }
 }
-
-
