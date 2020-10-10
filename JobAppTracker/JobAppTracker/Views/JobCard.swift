@@ -12,7 +12,7 @@ struct JobCard: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text(job.title)
                         .font(.title2).bold()
