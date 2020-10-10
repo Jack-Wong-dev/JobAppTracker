@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ActiveApplicationsView: View {
     
-    @ObservedObject var jobListVM = JobListViewModel()
+    @StateObject var jobListVM = JobListViewModel()
     @State private var showSheet = false
     
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
-    
+        
     var body: some View {
         
         ZStack(alignment: .bottomTrailing) {
@@ -32,9 +32,6 @@ struct ActiveApplicationsView: View {
                 
                 Spacer().frame(height: 70)
             }
-            .sheet(isPresented: $showSheet, content: {
-                AddJobAppScreen(jobListVM: jobListVM, showSheet: $showSheet)
-            })
             
             VStack {
                 Button(action: {
@@ -53,6 +50,10 @@ struct ActiveApplicationsView: View {
                 DetailScreen(job: jobToShow, jobListVM: jobListVM)
             }
         }
+        .fullScreenCover(isPresented: $showSheet, content: {
+            AddJobAppScreen(jobListVM: jobListVM, showSheet: $showSheet)
+        })
+
     }
 }
 
