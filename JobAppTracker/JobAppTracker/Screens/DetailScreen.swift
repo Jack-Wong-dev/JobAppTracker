@@ -26,13 +26,13 @@ struct DetailScreen: View {
                                 .font(Font.subheadline.weight(.semibold))
                         }
                         Spacer()
-                        RingView(width: 60, height: 60)
+                        RingView(status: job.status, width: 60, height: 60)
                     }
                     
                     Text("Applied on: \(job.appliedDate.toString(.medium))")
                         .font(Font.caption.weight(.semibold))
                     
-                    Text("Status: \(job.status.capitalized)")
+                    Text("Status: \(job.status.id.capitalized)")
                         .font(Font.callout.weight(.semibold))
                     
                     if job.remote == true {

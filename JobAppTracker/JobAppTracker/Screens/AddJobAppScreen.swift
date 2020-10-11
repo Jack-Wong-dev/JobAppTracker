@@ -76,8 +76,8 @@ struct AddJobAppScreen: View {
         }
     }
     
-    private func submitPressed() {        
-        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status.id, remote: remote, url: url, salary: salary, notes: notes))
+    private func submitPressed() {
+        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status, remote: remote, url: url, salary: salary, notes: notes))
         
         presentationMode.wrappedValue.dismiss()
     }

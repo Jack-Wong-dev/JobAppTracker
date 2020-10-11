@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum ApplicationStatus: String, Identifiable, CaseIterable {
+enum ApplicationStatus: String, Codable, Identifiable, CaseIterable {
     var id: String { self.rawValue }
-    case watching
-    case applied
-    case interviewing
-    case rejected
-    case offered
+    case watching = "watching"
+    case applied = "applied"
+    case interviewing = "interviewing"
+    case rejected = "rejected"
+    case offered = "offered"
 }

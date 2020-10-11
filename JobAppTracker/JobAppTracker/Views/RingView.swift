@@ -8,17 +8,21 @@
 import SwiftUI
 struct RingView: View {
     
+    var status: ApplicationStatus
+    
     var color1 = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
     var color2 = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
     var width: CGFloat = 300
     var height: CGFloat = 300
-    var percent: CGFloat = 75
-        
+    var percent: CGFloat {
+        determinePercentage()
+    }
+    
     var body: some View {
-
+        
         let multipler = width / 44
         let progress = 1 - (percent / 100)
-
+        
         return ZStack {
             
             Circle()
@@ -39,14 +43,29 @@ struct RingView: View {
             Text("\(Int(percent))%")
                 .font(.system(size: 14 * multipler))
                 .fontWeight(.bold)
-
+            
+        }
+    }
+    
+    private func determinePercentage() -> CGFloat {
+        switch status {
+        case .watching:
+            return 0.0
+        case .applied:
+            return 33.0
+        case .interviewing:
+            return 66.0
+        case .rejected:
+            return 66.0
+        case .offered:
+            return 100.0
         }
     }
 }
 
 struct RingView_Previews: PreviewProvider {
     static var previews: some View {
-        RingView()
+        RingView(status: .applied)
             .previewDevice("iPhone 11 Pro")
     }
 }

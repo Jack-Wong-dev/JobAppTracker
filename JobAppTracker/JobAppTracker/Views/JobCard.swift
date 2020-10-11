@@ -30,7 +30,8 @@ struct JobCard: View {
                 .font(Font.subheadline.weight(.semibold))
                 
                 Spacer()
-                RingView(width: 60, height: 60)
+                
+                RingView(status: job.status, width: 60, height: 60)
             }  /* HStack: Top portion of the card */
             
             Text("Applied on: \(job.appliedDate.toString(.medium))")
@@ -38,7 +39,7 @@ struct JobCard: View {
             
             Spacer()
             
-            Text("Status: \(job.status.capitalized)")
+            Text("Status: \(job.status.id.capitalized)")
                 .font(Font.callout.weight(.semibold))
             
         } /* VStack: Entire card */
@@ -47,12 +48,12 @@ struct JobCard: View {
     }
 }
 
-struct JobCard_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            JobCard(job: jobData[0])
-                .frame(width: 300, height: 200)
-        }
-    }
-}
+//struct JobCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VStack {
+//            JobCard(job: jobData[0])
+//                .frame(width: 300, height: 200)
+//        }
+//    }
+//}
 

@@ -29,10 +29,14 @@ struct UpdateView: View {
                 Text("Remote")
             })
             .toggleStyle(CheckboxToggleStyle())
-            TextField("Enter Status", text: $job.status)
             TextField("URL (Optional)", text: $job.url)
             TextField("Salary (Optional)", text: $job.salary)
-
+            
+            Picker(selection: $job.status, label: Text("Status"), content: /*@START_MENU_TOKEN@*/{
+                ForEach(ApplicationStatus.allCases) { status in
+                    Text(status.id.capitalized).tag(status)
+                }
+            }/*@END_MENU_TOKEN@*/)
             
             Section(header: Text("Notes")) {
                 TextEditor(text: $job.notes)

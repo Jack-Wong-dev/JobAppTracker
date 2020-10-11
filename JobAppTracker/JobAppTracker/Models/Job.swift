@@ -17,7 +17,7 @@ struct Job: Codable, Identifiable {
     var companyName: String
     var location: String
     var appliedDate: Date
-    var status: String
+    var status: ApplicationStatus
     var remote: Bool
     var url: String
     var salary: String
@@ -27,15 +27,15 @@ struct Job: Codable, Identifiable {
 
 #if DEBUG
 let jobData = [
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
-    Job(title: "Android Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: true, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: true, url: "https://spotify.com", salary: "", notes: "No reply in 2 months means not interested"),
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: false, url: "https://spotify.com", salary: "", notes: "No reply in 2 months means not interested"),
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: true, url: "https://spotify.com", salary: "110k", notes: ""),
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: true, url: "https://spotify.com", salary: "", notes: "No reply in 2 months means not interested"),
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
-    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: "Applied", remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested")
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
+    Job(title: "Android Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: true, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: true, url: "https://spotify.com", salary: "", notes: "No reply in 2 months means not interested"),
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: false, url: "https://spotify.com", salary: "", notes: "No reply in 2 months means not interested"),
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: true, url: "https://spotify.com", salary: "110k", notes: ""),
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: true, url: "https://spotify.com", salary: "", notes: "No reply in 2 months means not interested"),
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested"),
+    Job(title: "iOS Developer", companyName: "Spotify", location: "New York", appliedDate: Date(), status: .applied, remote: false, url: "https://spotify.com", salary: "110k", notes: "No reply in 2 months means not interested")
 ]
 #endif
 
