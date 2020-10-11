@@ -13,9 +13,7 @@ struct RingView: View {
     var width: CGFloat = 300
     var height: CGFloat = 300
     var percent: CGFloat = 75
-    
-//    @Binding var show: Bool
-    
+        
     var body: some View {
 
         let multipler = width / 44

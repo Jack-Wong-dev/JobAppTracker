@@ -51,11 +51,18 @@ struct ActiveApplicationsView: View {
             }
         }
         .fullScreenCover(item: $jobListVM.intent) { intent in
-            switch intent {
-            case .create:
+//            switch intent {
+//            case .create:
+//
+//                AddJobAppScreen(jobListVM: jobListVM)
+//            case .update:
+//                if let selectedJob = jobListVM.selectedJob {
+//                    UpdateView(jobListVM: jobListVM, job: selectedJob)
+//                }
+//            }
+            
+            if intent == .create {
                 AddJobAppScreen(jobListVM: jobListVM)
-            case .update:
-                Color.red
             }
         }
     }

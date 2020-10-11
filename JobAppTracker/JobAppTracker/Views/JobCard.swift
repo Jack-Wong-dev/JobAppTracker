@@ -16,7 +16,7 @@ struct JobCard: View {
                 VStack(alignment: .leading) {
                     Text(job.title)
                         .font(.title2).bold()
-                    
+                     
                     Text(job.companyName)
                         .font(Font.headline.weight(.bold))
                     
@@ -31,7 +31,7 @@ struct JobCard: View {
                 
                 Spacer()
                 RingView(width: 60, height: 60)
-            }
+            }  /* HStack: Top portion of the card */
             
             Text("Applied on: \(job.appliedDate.toString(.medium))")
                 .font(Font.caption.weight(.semibold))
@@ -41,18 +41,18 @@ struct JobCard: View {
             Text("Status: \(job.status)")
                 .font(Font.callout.weight(.semibold))
             
-        }
+        } /* VStack: Entire card */
         .padding()
         .modifier(NeumorphicGreedy())
     }
 }
 
-//struct JobCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VStack {
-//            JobCard(job: jobData[0])
-//                .frame(width: 200, height: 200)
-//        }
-//    }
-//}
+struct JobCard_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            JobCard(job: jobData[0])
+                .frame(width: 300, height: 200)
+        }
+    }
+}
 

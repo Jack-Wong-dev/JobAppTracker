@@ -37,5 +37,9 @@ class JobListViewModel: ObservableObject {
     func deleteJob(job: Job) {
         jobRepository.deleteJob(job)
     }
+    
+    func updateJob(job: Job) {
+        jobRepository.updateJob(job)
+    }
 }
 

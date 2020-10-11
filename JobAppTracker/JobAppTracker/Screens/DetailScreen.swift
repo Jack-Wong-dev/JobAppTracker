@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    let job: Job
+    @State var job: Job
     @ObservedObject var jobListVM: JobListViewModel
     @State private var showingAlert = false
+    
+    
     
     var body: some View {
         
@@ -107,24 +109,26 @@ struct DetailScreen: View {
                 Spacer()
                 
                 //MARK: - Edit Button
-                Button {
-                    print("edit button pressed")
-                    jobListVM.intent = .update
-                } label: {
-                    Image(systemName: "pencil.circle.fill")
-                        .resizable()
-                        .frame(width: 56, height: 56)
-                        .foregroundColor(Color.orange)
-                }
+//                Button {
+//                    print("edit button pressed")
+//                    jobListVM.intent = .update
+//                } label: {
+//                    Image(systemName: "pencil.circle.fill")
+//                        .resizable()
+//                        .frame(width: 56, height: 56)
+//                        .foregroundColor(Color.orange)
+//                }
                 
-//                NavigationLink(
-//                    destination: UpdateView(),
-//                    label: {
-//                        Image(systemName: "pencil.circle.fill")
-//                            .resizable()
-//                            .frame(width: 56, height: 56)
-//                            .foregroundColor(Color.orange)
-//                    })
+                NavigationLink(
+                    destination: UpdateView(jobListVM: jobListVM, job: job) { updatedJob in
+                        job = updatedJob
+                    },
+                    label: {
+                        Image(systemName: "pencil.circle.fill")
+                            .resizable()
+                            .frame(width: 56, height: 56)
+                            .foregroundColor(Color.orange)
+                    })
             }
             .padding(.horizontal)
             
@@ -140,13 +144,3 @@ struct DetailScreen: View {
     
 }
 
-struct UpdateView: View {
-    var body: some View {
-        VStack {
-            Color.red.ignoresSafeArea()
-        }
-        .navigationTitle("Update")
-        .navigationBarTitleDisplayMode(.inline)
-        
-    }
-}
