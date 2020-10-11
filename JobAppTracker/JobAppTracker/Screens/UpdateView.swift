@@ -32,6 +32,7 @@ struct UpdateView: View {
             TextField("Enter Status", text: $job.status)
             TextField("URL (Optional)", text: $job.url)
             TextField("Salary (Optional)", text: $job.salary)
+
             
             Section(header: Text("Notes")) {
                 TextEditor(text: $job.notes)

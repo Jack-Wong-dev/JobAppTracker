@@ -12,16 +12,10 @@ struct DetailScreen: View {
     @ObservedObject var jobListVM: JobListViewModel
     @State private var showingAlert = false
     
-    
-    
     var body: some View {
-        
-        
-        //TODO: Decide on fullscreen or nagivation stack for update view
-        
         NavigationView {
             ZStack(alignment: .bottom) {
-                VStack() {
+                VStack(alignment: .leading) {
                     HStack {
                         VStack(alignment: .leading) {
                             Text(job.title)
@@ -38,7 +32,7 @@ struct DetailScreen: View {
                     Text("Applied on: \(job.appliedDate.toString(.medium))")
                         .font(Font.caption.weight(.semibold))
                     
-                    Text("Status: \(job.status)")
+                    Text("Status: \(job.status.capitalized)")
                         .font(Font.callout.weight(.semibold))
                     
                     if job.remote == true {
@@ -107,17 +101,6 @@ struct DetailScreen: View {
                 }
                 
                 Spacer()
-                
-                //MARK: - Edit Button
-//                Button {
-//                    print("edit button pressed")
-//                    jobListVM.intent = .update
-//                } label: {
-//                    Image(systemName: "pencil.circle.fill")
-//                        .resizable()
-//                        .frame(width: 56, height: 56)
-//                        .foregroundColor(Color.orange)
-//                }
                 
                 NavigationLink(
                     destination: UpdateView(jobListVM: jobListVM, job: job) { updatedJob in

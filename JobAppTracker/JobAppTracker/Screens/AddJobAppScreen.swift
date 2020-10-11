@@ -16,30 +16,40 @@ struct AddJobAppScreen: View {
     @State private var company = ""
     @State private var location = ""
     @State private var applyDate = Date()
-    @State private var status = ""
     @State private var remote = false
     @State private var url = ""
     @State private var salary = ""
     @State private var notes = ""
+    @State private var status: ApplicationStatus = .watching
     
     
     var body: some View {
         NavigationView {
             Form {
                 TextField("Enter title", text: $title)
+                
                 TextField("Enter Company", text: $company)
+                
                 TextField("Enter Location", text: $location)
+                
                 DatePicker("Application Date", selection: $applyDate, displayedComponents: .date)
                     .accentColor(.purple)
                     .datePickerStyle(CompactDatePickerStyle())
+                
                 Toggle(isOn: $remote, label: {
                     Text("Remote")
                 })
                 .toggleStyle(CheckboxToggleStyle())
-                TextField("Enter Status", text:$status)
+                
                 TextField("URL (Optional)", text: $url)
                 TextField("Salary (Optional)", text: $salary)
-
+                
+                Picker(selection: $status, label: Text("Status"), content: /*@START_MENU_TOKEN@*/{
+                    ForEach(ApplicationStatus.allCases) { status in
+                        Text(status.id.capitalized).tag(status)
+                    }
+                }/*@END_MENU_TOKEN@*/)
+                
                 Section(header: Text("Notes")) {
                     TextEditor(text: $notes)
                 }
@@ -66,16 +76,13 @@ struct AddJobAppScreen: View {
         }
     }
     
-    private func submitPressed() {
-        print("submit pressed")
-
-        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status, remote: remote, url: url, salary: salary, notes: notes))
+    private func submitPressed() {        
+        jobListVM.addJob(job: Job(title: title, companyName: company, location: location, appliedDate: applyDate, status: status.id, remote: remote, url: url, salary: salary, notes: notes))
         
         presentationMode.wrappedValue.dismiss()
     }
     
     private func cancelPressed() {
-        print("cancel pressed")
         presentationMode.wrappedValue.dismiss()
     }
 }

@@ -38,7 +38,7 @@ struct JobCard: View {
             
             Spacer()
             
-            Text("Status: \(job.status)")
+            Text("Status: \(job.status.capitalized)")
                 .font(Font.callout.weight(.semibold))
             
         } /* VStack: Entire card */

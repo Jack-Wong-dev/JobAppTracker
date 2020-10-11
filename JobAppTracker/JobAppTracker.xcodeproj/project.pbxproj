@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A112FD32533A54400B65DEF /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FD22533A54400B65DEF /* UpdateView.swift */; };
+		0A112FEB2533BEC100B65DEF /* ApplicationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */; };
 		0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */; };
 		0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */; };
 		0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0A112FD22533A54400B65DEF /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
+		0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatus.swift; sourceTree = "<group>"; };
 		0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
 		0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifier.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				0AF9C1CC252D237800D3B5D9 /* Job.swift */,
 				0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */,
+				0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */,
 				0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */,
 				0A112FD32533A54400B65DEF /* UpdateView.swift in Sources */,
+				0A112FEB2533BEC100B65DEF /* ApplicationStatus.swift in Sources */,
 				0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */,
 				0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */,
 				0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */,
