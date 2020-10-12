@@ -1,5 +1,23 @@
 # JobAppTracker
 
+
+| iPhone Light Mode | iPhone Dark Mode |
+| --- | --- |
+| ![iPhone 11 Pro Light Mode](images/iPhone11ProLightMode.png) | ![iPad Pro 2020 Portrait - Dark](images/iPhone11ProDarkMode.png) |
+
+| iPad Light Mode (Portrait) | iPad Dark Mode (Portrait) |
+| --- | --- |
+| ![iPad Pro 2020 Portrait - Light](images/iPadPro2020LightPortrait.png) | ![iPad Pro 2020 Portrait - Dark](images/iPadPro2020DarkPortrait.png) |
+
+| iPad Light Mode (Landscape) |
+| --- | 
+| ![iPad Pro 2020 Landscape - Light](images/iPadPro2020LightLandscape.png) | 
+
+| iPad Dark Mode (Landscape) |
+| --- | 
+|![iPad Pro 2020 Landscape - Dark](images/iPadPro2020DarkLandscape.png) |
+
+
 ## Todos
 * <strike>Implement Dark Mode</strike>
 * <strike>Neumorphic Design on the cards</strike>
