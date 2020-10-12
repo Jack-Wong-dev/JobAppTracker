@@ -1,4 +1,5 @@
 # JobAppTracker
+Job Application Tracker
 
 ## Technologies Used
 * SwiftUI (https://developer.apple.com/documentation/swiftui)
