@@ -1,5 +1,10 @@
 # JobAppTracker
 
+## Technologies Used
+* SwiftUI (https://developer.apple.com/documentation/swiftui)
+* Combine (https://firebase.google.com/docs)
+* Firebase Authentication (https://firebase.google.com/docs/auth)
+* Firebase Firestore (https://firebase.google.com/docs/firestore
 
 | iPhone Light Mode | iPhone Dark Mode |
 | --- | --- |
