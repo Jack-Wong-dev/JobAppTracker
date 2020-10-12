@@ -8,5 +8,7 @@
 * <strike>Firebase setup</strike>
 * <strike>Anonymous sign in</strike>
 * Implement ability to transition from anoymous to permanent
-* Finish all CRUD implementation
+* <strike> Finish all CRUD implementation</strike>
+* Hero Animation
+* Size Classes?
 
