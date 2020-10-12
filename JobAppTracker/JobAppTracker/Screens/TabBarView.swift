@@ -24,7 +24,7 @@ struct TabBarView: View {
     var currentScreen: some View {
         switch tabItems.selectedTabIndex {
         case 1:
-            ActiveApplicationsView()
+            JobApplicationsView()
         case 2:
             SearchScreen()
         case 3:

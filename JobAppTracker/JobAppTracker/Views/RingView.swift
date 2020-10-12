@@ -26,7 +26,7 @@ struct RingView: View {
         return ZStack {
             
             Circle()
-                .stroke(Color.black.opacity(0.1), style: StrokeStyle(lineWidth: 5 * multipler))
+                .stroke(Color.primary.opacity(0.1), style: StrokeStyle(lineWidth: 5 * multipler))
                 .frame(width: width, height: height)
             
             Circle()
@@ -39,6 +39,13 @@ struct RingView: View {
                 .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                 .frame(width: width, height: height)
                 .shadow(color: Color(color2).opacity(0.1), radius: 3 * multipler, x: 0, y: 3 * multipler)
+            
+            if status == .rejected {
+                Image(systemName: "xmark")
+                    .resizable()
+                    .frame(width: width, height: height)
+                    .foregroundColor(.red)
+            }
             
             Text("\(Int(percent))%")
                 .font(.system(size: 14 * multipler))

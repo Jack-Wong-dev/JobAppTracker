@@ -39,8 +39,15 @@ struct JobCard: View {
             
             Spacer()
             
-            Text("Status: \(job.status.id.capitalized)")
-                .font(Font.callout.weight(.semibold))
+            HStack {
+                Text("Status: ")
+                    
+                Text(job.status.id.capitalized)
+                    .foregroundColor(Color(job.status.color))
+                    .fontWeight(.heavy)
+            }
+            .font(Font.callout.weight(.semibold))
+
             
         } /* VStack: Entire card */
         .padding()
