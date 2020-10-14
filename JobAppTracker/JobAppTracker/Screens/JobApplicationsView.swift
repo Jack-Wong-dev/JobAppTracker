@@ -16,7 +16,6 @@ struct JobApplicationsView: View {
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
     @State var yes = true
     
-    
     var body: some View {
         
         ZStack(alignment: .bottomTrailing) {
@@ -31,6 +30,9 @@ struct JobApplicationsView: View {
                                 .matchedGeometryEffect(id: job.id, in: namespace)
                                 .animation(.spring(response: 0.35, dampingFraction: 0.7))
                                 .zIndex(1)
+                                .frame(height: 200)
+                        } else {
+                            Color.clear
                                 .frame(height: 200)
                         }
                     }
@@ -49,6 +51,7 @@ struct JobApplicationsView: View {
                 Spacer().frame(height: 70)
             }
         }
+        .disabled(jobListVM.selectedJob != nil)
         .overlay(
             Group {
                 if let jobToShow = jobListVM.selectedJob {
@@ -72,6 +75,7 @@ struct JobApplicationsView: View {
                 AddJobAppScreen(jobListVM: jobListVM)
             }
         }
+        .animation(.default)
 
     }
     
