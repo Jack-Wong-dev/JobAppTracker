@@ -25,13 +25,12 @@ struct JobApplicationsView: View {
                     ForEach(jobListVM.jobsList) { job in
                         if job.id != jobListVM.selectedJob?.id {
                             JobCard(job: job)
-                                .matchedGeometryEffect(id: job.id, in: namespace)
-                                .frame(height: 200)
                                 .onTapGesture() {
                                     jobListVM.selectedJob = job
                                 }
-                        } else {
-                            Color.clear
+                                .matchedGeometryEffect(id: job.id, in: namespace)
+                                .animation(.spring(response: 0.35, dampingFraction: 0.7))
+                                .zIndex(1)
                                 .frame(height: 200)
                         }
                     }
@@ -54,7 +53,7 @@ struct JobApplicationsView: View {
             Group {
                 if let jobToShow = jobListVM.selectedJob {
                     DetailScreen(job: jobToShow, jobListVM: jobListVM, namespace: namespace)
-                        .animation(.easeOut)
+                        .animation(.spring(dampingFraction: 0.7))
                 }
             }
         )
@@ -73,6 +72,7 @@ struct JobApplicationsView: View {
                 AddJobAppScreen(jobListVM: jobListVM)
             }
         }
+
     }
     
     var floatingActionButton: some View {
