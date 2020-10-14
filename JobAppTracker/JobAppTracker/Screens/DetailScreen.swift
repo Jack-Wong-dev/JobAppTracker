@@ -58,7 +58,13 @@ struct DetailScreen: View {
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.background.ignoresSafeArea())
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.gradientStart, Color.gradientEnd]),
+                    startPoint: .topLeading, endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+            )
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
