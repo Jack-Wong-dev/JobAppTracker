@@ -12,6 +12,8 @@ struct DetailScreen: View {
     @ObservedObject var jobListVM: JobListViewModel
     @State private var showingAlert = false
     
+    var namespace: Namespace.ID
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -57,6 +59,7 @@ struct DetailScreen: View {
                 
             }
             .padding()
+            .matchedGeometryEffect(id: job.id, in: namespace)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
                 LinearGradient(

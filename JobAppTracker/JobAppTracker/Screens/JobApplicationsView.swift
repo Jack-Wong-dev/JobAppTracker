@@ -9,10 +9,13 @@ import SwiftUI
 
 struct JobApplicationsView: View {
     
+    @Namespace var namespace
+    
     @StateObject var jobListVM = JobListViewModel()
     
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
     @State var yes = true
+    
     
     var body: some View {
         
@@ -20,11 +23,17 @@ struct JobApplicationsView: View {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, spacing: 40) {
                     ForEach(jobListVM.jobsList) { job in
-                        JobCard(job: job)
-                            .frame(height: 200)
-                            .onTapGesture() {
-                                jobListVM.selectedJob = job
-                            }
+                        if job.id != jobListVM.selectedJob?.id {
+                            JobCard(job: job)
+                                .matchedGeometryEffect(id: job.id, in: namespace)
+                                .frame(height: 200)
+                                .onTapGesture() {
+                                    jobListVM.selectedJob = job
+                                }
+                        } else {
+                            Color.clear
+                                .frame(height: 200)
+                        }
                     }
                 }
                 .padding()
@@ -40,11 +49,15 @@ struct JobApplicationsView: View {
         
                 Spacer().frame(height: 70)
             }
-            
-            if let jobToShow = jobListVM.selectedJob {
-                DetailScreen(job: jobToShow, jobListVM: jobListVM)
-            }
         }
+        .overlay(
+            Group {
+                if let jobToShow = jobListVM.selectedJob {
+                    DetailScreen(job: jobToShow, jobListVM: jobListVM, namespace: namespace)
+                        .animation(.easeOut)
+                }
+            }
+        )
         .fullScreenCover(item: $jobListVM.intent) { intent in
             //            switch intent {
             //            case .create:
