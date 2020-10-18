@@ -48,12 +48,6 @@ struct DetailScreen: View {
                 Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
                     .font(Font.caption.weight(.semibold))
                 
-                
-                if !jobInfo.notes.isEmpty {
-                    Text(jobInfo.notes)
-                        .font(Font.body.weight(.semibold))
-                }
-                
                 HStack {
                     Text("Status: ")
                         
@@ -62,6 +56,11 @@ struct DetailScreen: View {
                         .fontWeight(.heavy)
                 }
                 .font(Font.callout.weight(.semibold))
+                
+                if !jobInfo.notes.isEmpty {
+                    Text(jobInfo.notes)
+                        .font(Font.body.weight(.semibold))
+                }
                 
                 Spacer(minLength: 70)
             } /* VStack */
