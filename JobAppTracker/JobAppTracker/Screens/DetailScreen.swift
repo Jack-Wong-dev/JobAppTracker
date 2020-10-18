@@ -23,20 +23,18 @@ struct DetailScreen: View {
                         VStack(alignment: .leading) {
                             Text(jobInfo.title)
                                 .font(.title2).bold()
+                            
                             Text(jobInfo.companyName)
                                 .font(Font.headline.weight(.semibold))
+                            
                             Text(jobInfo.location)
                                 .font(Font.subheadline.weight(.semibold))
-                        }
+                        } /* VStack */
+                        
                         Spacer()
+                        
                         RingView(status: jobInfo.status, width: 60, height: 60)
-                    }
-                    
-                    Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
-                        .font(Font.caption.weight(.semibold))
-                    
-                    Text("Status: \(jobInfo.status.id.capitalized)")
-                        .font(Font.callout.weight(.semibold))
+                    } /* HStack */
                     
                     if jobInfo.remote == true {
                         Text("Remote: \(jobInfo.remote.description)")
@@ -47,18 +45,23 @@ struct DetailScreen: View {
                             .font(Font.body.weight(.semibold))
                     }
                     
+                    Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
+                        .font(Font.caption.weight(.semibold))
+                    
+                    Text("Status: \(jobInfo.status.id.capitalized)")
+                        .font(Font.callout.weight(.semibold))
+                    
+                    
                     if !jobInfo.notes.isEmpty {
                         Text(jobInfo.notes)
                             .font(Font.body.weight(.semibold))
                     }
                     
                     Spacer()
-                    
-                }
+                } /* VStack */
                 
                 floatingActionButtons
-                
-            }
+            } /* ZStack */
             .padding()
             .matchedGeometryEffect(id: jobInfo.id, in: namespace)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -68,16 +71,9 @@ struct DetailScreen: View {
                     startPoint: .topLeading, endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea()
-//                .matchedGeometryEffect(id: jobInfo.id, in: namespace)
-
             )
-//            .animation(.default) //Opening animation
             .animation(.easeOut) //Opening animation
-
-
-
     }
-    
     
     var floatingActionButtons: some View {
         VStack {
@@ -94,7 +90,7 @@ struct DetailScreen: View {
                 .alert(isPresented:$showingAlert) {
                     Alert(
                         title: Text("Are you sure you want to delete this?"),
-                        message: Text("There is no undo"),
+                        message: Text("You cannot undo this."),
                         primaryButton: .destructive(Text("Delete")) {
                             print("Deleting...")
                             deleteAction()
@@ -125,23 +121,11 @@ struct DetailScreen: View {
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
                 }
-                
-//                NavigationLink(
-//                    destination: UpdateView(jobListVM: jobListVM, job: jobInfo) { updatedJob in
-//                        jobInfo = updatedJob
-//                    },
-//                    label: {
-//                        Image(systemName: "pencil.circle.fill")
-//                            .resizable()
-//                            .frame(width: 56, height: 56)
-//                            .foregroundColor(Color.orange)
-//                    })
-            }
+            } /* HStack */
             .padding(.horizontal)
             
-            
             Spacer().frame(height: 70)
-        }
+        } /* VStack */
     }
     
     private func deleteAction() {

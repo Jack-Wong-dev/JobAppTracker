@@ -24,7 +24,6 @@ struct RingView: View {
         let progress = 1 - (percent / 100)
         
         return ZStack {
-            
             Circle()
                 .stroke(Color.primary.opacity(0.1), style: StrokeStyle(lineWidth: 5 * multipler))
                 .frame(width: width, height: height)
