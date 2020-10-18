@@ -14,26 +14,23 @@ struct ApplicationsScreen: View {
     @StateObject var jobListVM = JobListViewModel()
     
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
-    
-    var body: some View {
         
+    var body: some View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, spacing: 40) {
                     ForEach(jobListVM.jobsList) { job in
                         if job.id != jobListVM.selectedJob?.id {
-                            JobCard(job: job)
+                            JobCard(job: job, namespace: namespace)
                                 .onTapGesture() {
                                     jobListVM.selectedJob = job
                                 }
-                                .matchedGeometryEffect(id: job.id, in: namespace)
                                 .animation(.easeInOut) //Closing animation
-                                .animation(.none)
                                 .zIndex(1)
-                                .frame(height: 200)
                         } else {
                             Color.clear
                                 .frame(height: 200)
+                                .animation(.easeInOut) //Closing animation
                         }
                     }  /* ForEach */
                 } /* LazyVGrid */
@@ -89,19 +86,5 @@ struct ActiveApplicationsView_Previews: PreviewProvider {
         }
         .background(Color.background.ignoresSafeArea())
         .previewDevice("iPhone 11 Pro")
-    }
-}
-
-
-struct ModalView: View {
-    @Environment(\.presentationMode) var presentationMode
-    var body: some View {
-        Button("Dismiss") {
-            presentationMode.wrappedValue.dismiss()
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.red)
-        .foregroundColor(Color.white)
-        .edgesIgnoringSafeArea(.all)
     }
 }

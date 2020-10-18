@@ -12,13 +12,35 @@ struct DetailScreen: View {
     @EnvironmentObject var jobListVM: JobListViewModel
     
     @State private var showingAlert = false
-    
+    @State private var show = false
+        
     var jobInfo: Job
     var namespace: Namespace.ID
     
     var body: some View {
         ZStack(alignment: .bottom) {
+            ZStack {
+                Color.shadow
+                
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .foregroundColor(Color.lighting)
+                    .blur(radius: 4)
+                    .offset(x: -8, y: -8)
+                
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(
+                        LinearGradient(gradient: Gradient(colors: [Color.gradientStart, Color.gradientEnd]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                    .padding(2)
+                    .blur(radius: 2)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .shadow(color: Color.shadow, radius: 15, x: 15, y: 15)  //Bottom trailing shadow.
+            .shadow(color: Color.lighting, radius: 15, x: -15, y: -15) //Top leading shadow.
+            .matchedGeometryEffect(id: "Job \(String(describing: jobInfo.id))", in: namespace)
+            
             VStack(alignment: .leading) {
+                //MARK: - Header
                 HStack(alignment: .top) {
                     VStack(alignment: .leading) {
                         Text(jobInfo.title)
@@ -31,7 +53,7 @@ struct DetailScreen: View {
                             .font(Font.headline.weight(.semibold))
                         
                         if jobInfo.remote == true {
-                            Text("Remote: \(jobInfo.remote.description)")
+                            Text("Remote")
                         }
                         
                         if !jobInfo.salary.isEmpty {
@@ -44,40 +66,43 @@ struct DetailScreen: View {
                     
                     RingView(status: jobInfo.status, width: 60, height: 60)
                 } /* HStack */
+                .matchedGeometryEffect(id: "Header \(String(describing: jobInfo.id))", in: namespace)
                 
                 Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
                     .font(Font.caption.weight(.semibold))
+                    .matchedGeometryEffect(id: "Date \(String(describing: jobInfo.id))", in: namespace)
                 
                 HStack {
                     Text("Status: ")
-                        
+                    
                     Text(jobInfo.status.id.capitalized)
                         .foregroundColor(Color(jobInfo.status.color))
                         .fontWeight(.heavy)
                 }
                 .font(Font.callout.weight(.semibold))
+                .matchedGeometryEffect(id: "Status \(String(describing: jobInfo.id))", in: namespace)
                 
                 if !jobInfo.notes.isEmpty {
                     Text(jobInfo.notes)
                         .font(Font.body.weight(.semibold))
+                        .opacity(show ? 1 : 0)
+                        .animation(Animation.easeOut.delay(0.4))
+                        .offset(y: show ? 0 : 20)
                 }
                 
                 Spacer(minLength: 70)
             } /* VStack */
+            .padding()
             
             floatingActionButtons
+                .opacity(show ? 1 : 0)
+                .animation(Animation.easeOut.delay(0.4))
+                .offset(y: show ? 0 : 20)
         } /* ZStack */
-        .padding()
-        .matchedGeometryEffect(id: jobInfo.id, in: namespace)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            LinearGradient(
-                gradient: Gradient(colors: [Color.gradientStart, Color.gradientEnd]),
-                startPoint: .topLeading, endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-        )
         .animation(.easeOut) //Opening animation
+        .onAppear(perform: {
+            show.toggle()
+        })
     }
     
     var floatingActionButtons: some View {
@@ -91,7 +116,9 @@ struct DetailScreen: View {
                         .resizable()
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
+                        .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
                 }
+                .buttonStyle(FABStyle())
                 .alert(isPresented:$showingAlert) {
                     Alert(
                         title: Text("Are you sure you want to delete this?"),
@@ -113,7 +140,9 @@ struct DetailScreen: View {
                         .resizable()
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
+                        .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
                 }
+                .buttonStyle(FABStyle())
                 
                 Spacer()
                 
@@ -125,7 +154,10 @@ struct DetailScreen: View {
                         .resizable()
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
+                        .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
                 }
+                .buttonStyle(FABStyle())
+                
             } /* HStack */
             .padding(.horizontal)
             
@@ -133,10 +165,9 @@ struct DetailScreen: View {
         } /* VStack */
     }
     
+    //MARK:- Methods
     private func deleteAction() {
         jobListVM.deleteJob(job: jobInfo)
         jobListVM.selectedJob = nil
     }
-    
 }
-
