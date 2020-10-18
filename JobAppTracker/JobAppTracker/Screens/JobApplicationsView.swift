@@ -55,19 +55,20 @@ struct JobApplicationsView: View {
         .overlay(
             Group {
                 if let jobToShow = jobListVM.selectedJob {
-                    DetailScreen(jobInfo: jobToShow, jobListVM: jobListVM,namespace: namespace)
+                    DetailScreen(jobInfo: jobToShow, namespace: namespace)
                 }
             }
         )
         .fullScreenCover(item: $jobListVM.intent) { intent in
             if intent == .create {
-                AddJobAppScreen(jobListVM: jobListVM)
+                AddJobAppScreen()
             } else {
-                UpdateView(jobListVM: jobListVM, job: jobListVM.selectedJob!) { _ in
+                UpdateView(job: jobListVM.selectedJob!) { _ in
                     
                 }
             }
         }
+        .environmentObject(jobListVM)
 
     }
     

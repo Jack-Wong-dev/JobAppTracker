@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    var jobInfo: Job
-    @ObservedObject var jobListVM: JobListViewModel
+   
+    @EnvironmentObject var jobListVM: JobListViewModel
+
     @State private var showingAlert = false
     
+    var jobInfo: Job
     var namespace: Namespace.ID
     
     var body: some View {

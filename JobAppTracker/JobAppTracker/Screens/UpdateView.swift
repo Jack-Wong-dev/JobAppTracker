@@ -9,9 +9,8 @@ import SwiftUI
 
 struct UpdateView: View {
     @Environment(\.presentationMode) var presentationMode
-    
-    @ObservedObject var jobListVM: JobListViewModel
-    
+    @EnvironmentObject var jobListVM: JobListViewModel
+
     @State var job: Job
     
     var completion: (_ job: Job) -> Void

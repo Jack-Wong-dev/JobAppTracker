@@ -9,8 +9,7 @@ import SwiftUI
 
 struct AddJobAppScreen: View {
     @Environment(\.presentationMode) var presentationMode
-    
-    @ObservedObject var jobListVM: JobListViewModel
+    @EnvironmentObject var jobListVM: JobListViewModel
     
     @State private var title = ""
     @State private var company = ""
