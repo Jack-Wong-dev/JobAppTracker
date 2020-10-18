@@ -8,46 +8,45 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    @State var job: Job
+    var jobInfo: Job
     @ObservedObject var jobListVM: JobListViewModel
     @State private var showingAlert = false
     
     var namespace: Namespace.ID
     
     var body: some View {
-        NavigationView {
             ZStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(job.title)
+                            Text(jobInfo.title)
                                 .font(.title2).bold()
-                            Text(job.companyName)
+                            Text(jobInfo.companyName)
                                 .font(Font.headline.weight(.semibold))
-                            Text(job.location)
+                            Text(jobInfo.location)
                                 .font(Font.subheadline.weight(.semibold))
                         }
                         Spacer()
-                        RingView(status: job.status, width: 60, height: 60)
+                        RingView(status: jobInfo.status, width: 60, height: 60)
                     }
                     
-                    Text("Applied on: \(job.appliedDate.toString(.medium))")
+                    Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
                         .font(Font.caption.weight(.semibold))
                     
-                    Text("Status: \(job.status.id.capitalized)")
+                    Text("Status: \(jobInfo.status.id.capitalized)")
                         .font(Font.callout.weight(.semibold))
                     
-                    if job.remote == true {
-                        Text("Remote: \(job.remote.description)")
+                    if jobInfo.remote == true {
+                        Text("Remote: \(jobInfo.remote.description)")
                     }
                     
-                    if !job.salary.isEmpty {
-                        Text(job.salary)
+                    if !jobInfo.salary.isEmpty {
+                        Text(jobInfo.salary)
                             .font(Font.body.weight(.semibold))
                     }
                     
-                    if !job.notes.isEmpty {
-                        Text(job.notes)
+                    if !jobInfo.notes.isEmpty {
+                        Text(jobInfo.notes)
                             .font(Font.body.weight(.semibold))
                     }
                     
@@ -59,7 +58,7 @@ struct DetailScreen: View {
                 
             }
             .padding()
-            .matchedGeometryEffect(id: job.id, in: namespace)
+            .matchedGeometryEffect(id: jobInfo.id, in: namespace)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
                 LinearGradient(
@@ -67,10 +66,14 @@ struct DetailScreen: View {
                     startPoint: .topLeading, endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea()
+//                .matchedGeometryEffect(id: jobInfo.id, in: namespace)
+
             )
-            .navigationBarHidden(true)
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+//            .animation(.default) //Opening animation
+            .animation(.easeOut) //Opening animation
+
+
+
     }
     
     
@@ -108,19 +111,29 @@ struct DetailScreen: View {
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
                 }
+
                 
                 Spacer()
                 
-                NavigationLink(
-                    destination: UpdateView(jobListVM: jobListVM, job: job) { updatedJob in
-                        job = updatedJob
-                    },
-                    label: {
-                        Image(systemName: "pencil.circle.fill")
-                            .resizable()
-                            .frame(width: 56, height: 56)
-                            .foregroundColor(Color.orange)
-                    })
+                Button {
+                    jobListVM.intent = .update
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .frame(width: 56, height: 56)
+                        .foregroundColor(Color.orange)
+                }
+                
+//                NavigationLink(
+//                    destination: UpdateView(jobListVM: jobListVM, job: jobInfo) { updatedJob in
+//                        jobInfo = updatedJob
+//                    },
+//                    label: {
+//                        Image(systemName: "pencil.circle.fill")
+//                            .resizable()
+//                            .frame(width: 56, height: 56)
+//                            .foregroundColor(Color.orange)
+//                    })
             }
             .padding(.horizontal)
             
@@ -130,7 +143,7 @@ struct DetailScreen: View {
     }
     
     private func deleteAction() {
-        jobListVM.deleteJob(job: job)
+        jobListVM.deleteJob(job: jobInfo)
         jobListVM.selectedJob = nil
     }
     

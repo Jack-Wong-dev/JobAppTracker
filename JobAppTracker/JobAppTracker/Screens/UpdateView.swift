@@ -41,18 +41,33 @@ struct UpdateView: View {
             Section(header: Text("Notes")) {
                 TextEditor(text: $job.notes)
             }
-        }
-        .autocapitalization(.none)
-        .navigationTitle("Update Job Application")
-        .toolbar(content: {
-            ToolbarItem(placement: ToolbarItemPlacement.confirmationAction) {
+            
+      
+            
+            HStack {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Text("Exit")
+                })
                 Button(action: {
                     updatePressed()
                 }, label: {
                     Text("Update")
-                })
+            })
             }
-        })
+        }
+        .autocapitalization(.none)
+//        .navigationTitle("Update Job Application")
+//        .toolbar(content: {
+//            ToolbarItem(placement: ToolbarItemPlacement.confirmationAction) {
+//                Button(action: {
+//                    updatePressed()
+//                }, label: {
+//                    Text("Update")
+//                })
+//            }
+//        })
         
     }
     

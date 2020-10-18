@@ -14,7 +14,6 @@ struct JobApplicationsView: View {
     @StateObject var jobListVM = JobListViewModel()
     
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
-    @State var yes = true
     
     var body: some View {
         
@@ -28,20 +27,21 @@ struct JobApplicationsView: View {
                                     jobListVM.selectedJob = job
                                 }
                                 .matchedGeometryEffect(id: job.id, in: namespace)
-                                .animation(.spring(response: 0.35, dampingFraction: 0.7))
+                                .animation(.easeInOut) //Closing animation
+                                .animation(.none)
                                 .zIndex(1)
                                 .frame(height: 200)
                         } else {
                             Color.clear
                                 .frame(height: 200)
                         }
-                    }
-                }
+                    }  /* ForEach */
+                } /* LazyVGrid */
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 Spacer().frame(height: 70)
-            }
+            } /* ScrollView */
             
             VStack {
                 floatingActionButton
@@ -49,33 +49,25 @@ struct JobApplicationsView: View {
                     .padding(.horizontal)
         
                 Spacer().frame(height: 70)
-            }
-        }
+            } /* VStack */
+        }  /* ZStack */
         .disabled(jobListVM.selectedJob != nil)
         .overlay(
             Group {
                 if let jobToShow = jobListVM.selectedJob {
-                    DetailScreen(job: jobToShow, jobListVM: jobListVM, namespace: namespace)
-                        .animation(.spring(dampingFraction: 0.7))
+                    DetailScreen(jobInfo: jobToShow, jobListVM: jobListVM,namespace: namespace)
                 }
             }
         )
         .fullScreenCover(item: $jobListVM.intent) { intent in
-            //            switch intent {
-            //            case .create:
-            //
-            //                AddJobAppScreen(jobListVM: jobListVM)
-            //            case .update:
-            //                if let selectedJob = jobListVM.selectedJob {
-            //                    UpdateView(jobListVM: jobListVM, job: selectedJob)
-            //                }
-            //            }
-            
             if intent == .create {
                 AddJobAppScreen(jobListVM: jobListVM)
+            } else {
+                UpdateView(jobListVM: jobListVM, job: jobListVM.selectedJob!) { _ in
+                    
+                }
             }
         }
-        .animation(.default)
 
     }
     
