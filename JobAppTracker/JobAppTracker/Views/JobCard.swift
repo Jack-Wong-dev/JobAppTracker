@@ -55,12 +55,12 @@ struct JobCard: View {
     }
 }
 
-//struct JobCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VStack {
-//            JobCard(job: jobData[0])
-//                .frame(width: 300, height: 200)
-//        }
-//    }
-//}
+struct JobCard_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            JobCard(job: jobData[0])
+                .frame(width: 300, height: 200)
+        }
+    }
+}
 

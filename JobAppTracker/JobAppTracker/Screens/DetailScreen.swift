@@ -8,71 +8,77 @@
 import SwiftUI
 
 struct DetailScreen: View {
-   
+    
     @EnvironmentObject var jobListVM: JobListViewModel
-
+    
     @State private var showingAlert = false
     
     var jobInfo: Job
     var namespace: Namespace.ID
     
     var body: some View {
-            ZStack(alignment: .bottom) {
-                VStack(alignment: .leading) {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(jobInfo.title)
-                                .font(.title2).bold()
-                            
-                            Text(jobInfo.companyName)
-                                .font(Font.headline.weight(.semibold))
-                            
-                            Text(jobInfo.location)
-                                .font(Font.subheadline.weight(.semibold))
-                        } /* VStack */
+        ZStack(alignment: .bottom) {
+            VStack(alignment: .leading) {
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
+                        Text(jobInfo.title)
+                            .font(.title2).bold()
                         
-                        Spacer()
+                        Text(jobInfo.companyName)
+                            .font(Font.headline.weight(.bold))
                         
-                        RingView(status: jobInfo.status, width: 60, height: 60)
-                    } /* HStack */
-                    
-                    if jobInfo.remote == true {
-                        Text("Remote: \(jobInfo.remote.description)")
-                    }
-                    
-                    if !jobInfo.salary.isEmpty {
-                        Text(jobInfo.salary)
-                            .font(Font.body.weight(.semibold))
-                    }
-                    
-                    Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
-                        .font(Font.caption.weight(.semibold))
-                    
-                    Text("Status: \(jobInfo.status.id.capitalized)")
-                        .font(Font.callout.weight(.semibold))
-                    
-                    
-                    if !jobInfo.notes.isEmpty {
-                        Text(jobInfo.notes)
-                            .font(Font.body.weight(.semibold))
-                    }
+                        Text(jobInfo.location)
+                            .font(Font.headline.weight(.semibold))
+                        
+                        if jobInfo.remote == true {
+                            Text("Remote: \(jobInfo.remote.description)")
+                        }
+                        
+                        if !jobInfo.salary.isEmpty {
+                            Text("Salary: \(jobInfo.salary)")
+                        }
+                    } /* VStack */
+                    .font(Font.subheadline.weight(.semibold))
                     
                     Spacer()
-                } /* VStack */
+                    
+                    RingView(status: jobInfo.status, width: 60, height: 60)
+                } /* HStack */
                 
-                floatingActionButtons
-            } /* ZStack */
-            .padding()
-            .matchedGeometryEffect(id: jobInfo.id, in: namespace)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(
-                LinearGradient(
-                    gradient: Gradient(colors: [Color.gradientStart, Color.gradientEnd]),
-                    startPoint: .topLeading, endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
+                Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
+                    .font(Font.caption.weight(.semibold))
+                
+                
+                if !jobInfo.notes.isEmpty {
+                    Text(jobInfo.notes)
+                        .font(Font.body.weight(.semibold))
+                }
+                
+                HStack {
+                    Text("Status: ")
+                        
+                    Text(jobInfo.status.id.capitalized)
+                        .foregroundColor(Color(jobInfo.status.color))
+                        .fontWeight(.heavy)
+                }
+                .font(Font.callout.weight(.semibold))
+                
+                Spacer(minLength: 70)
+            } /* VStack */
+            
+            floatingActionButtons
+        } /* ZStack */
+        .padding()
+        .matchedGeometryEffect(id: jobInfo.id, in: namespace)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.gradientStart, Color.gradientEnd]),
+                startPoint: .topLeading, endPoint: .bottomTrailing
             )
-            .animation(.easeOut) //Opening animation
+            .ignoresSafeArea()
+        )
+        .animation(.easeOut) //Opening animation
     }
     
     var floatingActionButtons: some View {
@@ -109,7 +115,7 @@ struct DetailScreen: View {
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
                 }
-
+                
                 Spacer()
                 
                 //MARK: - Update Button
