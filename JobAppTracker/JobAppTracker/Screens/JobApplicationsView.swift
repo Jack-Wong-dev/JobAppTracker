@@ -62,14 +62,11 @@ struct JobApplicationsView: View {
         .fullScreenCover(item: $jobListVM.intent) { intent in
             if intent == .create {
                 AddJobAppScreen()
-            } else {
-                UpdateView(job: jobListVM.selectedJob!) { _ in
-                    
-                }
+            } else if let job = jobListVM.selectedJob {
+                UpdateView(job: job)
             }
         }
         .environmentObject(jobListVM)
-
     }
     
     var floatingActionButton: some View {

@@ -114,13 +114,13 @@ struct DetailScreen: View {
                         .foregroundColor(Color.orange)
                 }
 
-                
                 Spacer()
                 
+                //MARK: - Update Button
                 Button {
                     jobListVM.intent = .update
                 } label: {
-                    Image(systemName: "xmark.circle.fill")
+                    Image(systemName: "pencil.circle.fill")
                         .resizable()
                         .frame(width: 56, height: 56)
                         .foregroundColor(Color.orange)
