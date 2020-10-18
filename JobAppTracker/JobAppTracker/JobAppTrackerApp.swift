@@ -14,7 +14,7 @@ struct JobAppTrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+            TabBarScreen()
         }
     }
 }

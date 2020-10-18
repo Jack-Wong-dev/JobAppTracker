@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JobApplicationsView: View {
+struct ApplicationsScreen: View {
     
     @Namespace var namespace
     
@@ -85,7 +85,7 @@ struct JobApplicationsView: View {
 struct ActiveApplicationsView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            JobApplicationsView()
+            ApplicationsScreen()
         }
         .background(Color.background.ignoresSafeArea())
         .previewDevice("iPhone 11 Pro")

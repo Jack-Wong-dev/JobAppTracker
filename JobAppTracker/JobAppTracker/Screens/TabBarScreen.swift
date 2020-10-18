@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabBarView: View {
+struct TabBarScreen: View {
     @StateObject var tabItems = TabItems()
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -50,7 +50,7 @@ struct TabBarView: View {
 
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        TabBarScreen()
             .previewDevice("iPhone 11 Pro")
     }
 }
