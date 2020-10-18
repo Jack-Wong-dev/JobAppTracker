@@ -63,7 +63,7 @@ struct JobApplicationsView: View {
             if intent == .create {
                 AddJobAppScreen()
             } else if let job = jobListVM.selectedJob {
-                UpdateView(job: job)
+                UpdateScreen(job: job)
             }
         }
         .environmentObject(jobListVM)

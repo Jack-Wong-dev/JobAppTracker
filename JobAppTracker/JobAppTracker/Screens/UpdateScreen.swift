@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UpdateView: View {
+struct UpdateScreen: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var jobListVM: JobListViewModel
 
