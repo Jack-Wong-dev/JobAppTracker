@@ -19,25 +19,8 @@ struct DetailScreen: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            ZStack {
-                Color.shadow
-                
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .foregroundColor(Color.lighting)
-                    .blur(radius: 4)
-                    .offset(x: -8, y: -8)
-                
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(
-                        LinearGradient(gradient: Gradient(colors: [Color.gradientStart, Color.gradientEnd]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    )
-                    .padding(2)
-                    .blur(radius: 2)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            .shadow(color: Color.shadow, radius: 15, x: 15, y: 15)  //Bottom trailing shadow.
-            .shadow(color: Color.lighting, radius: 15, x: -15, y: -15) //Top leading shadow.
-            .matchedGeometryEffect(id: "Job \(String(describing: jobInfo.id))", in: namespace)
+            NeumorphicCard()
+                .matchedGeometryEffect(id: "Job \(String(describing: jobInfo.id))", in: namespace)
             
             VStack(alignment: .leading) {
                 //MARK: - Header
