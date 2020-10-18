@@ -31,7 +31,6 @@ struct NeumorphicGreedy: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             .shadow(color: Color.shadow, radius: 15, x: 15, y: 15)  //Bottom trailing shadow.
             .shadow(color: Color.lighting, radius: 15, x: -15, y: -15) //Top leading shadow.
-        
     }
 }
 
@@ -59,7 +58,6 @@ struct Neumorphic: ViewModifier {
             .clipShape(Circle())
             .shadow(color: Color.shadow, radius: 20, x: 20, y: 20)
             .shadow(color: Color.lighting, radius: 20, x: -20, y: -20)
-        
     }
 }
 
