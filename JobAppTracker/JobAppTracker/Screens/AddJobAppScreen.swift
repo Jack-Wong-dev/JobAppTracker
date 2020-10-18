@@ -24,55 +24,60 @@ struct AddJobAppScreen: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                TextField("Enter title", text: $title)
-                
-                TextField("Enter Company", text: $company)
-                
-                TextField("Enter Location", text: $location)
-                
-                DatePicker("Application Date", selection: $applyDate, displayedComponents: .date)
-                    .accentColor(.purple)
-                    .datePickerStyle(CompactDatePickerStyle())
-                
-                Toggle(isOn: $remote, label: {
-                    Text("Remote")
-                })
-                .toggleStyle(CheckboxToggleStyle())
-                
-                TextField("URL (Optional)", text: $url)
-                TextField("Salary (Optional)", text: $salary)
-                
-                Picker(selection: $status, label: Text("Status"), content: /*@START_MENU_TOKEN@*/{
-                    ForEach(ApplicationStatus.allCases) { status in
-                        Text(status.id.capitalized).tag(status)
+            content
+                .navigationTitle("Add Job Application")
+                .toolbar(content: {
+                    ToolbarItem(placement: ToolbarItemPlacement.cancellationAction) {
+                        Button(action: {
+                            cancelPressed()
+                        }, label: {
+                            Text("Cancel")
+                        })
                     }
-                }/*@END_MENU_TOKEN@*/)
-                
-                Section(header: Text("Notes")) {
-                    TextEditor(text: $notes)
-                }
-            }
-            .autocapitalization(.none)
-            .navigationTitle("Add Job Application")
-            .toolbar(content: {
-                ToolbarItem(placement: ToolbarItemPlacement.cancellationAction) {
-                    Button(action: {
-                        cancelPressed()
-                    }, label: {
-                        Text("Cancel")
-                    })
-                }
-                
-                ToolbarItem(placement: ToolbarItemPlacement.confirmationAction) {
-                    Button(action: {
-                        submitPressed()
-                    }, label: {
-                        Text("Submit")
-                    })
-                }
-            })
+                    
+                    ToolbarItem(placement: ToolbarItemPlacement.confirmationAction) {
+                        Button(action: {
+                            submitPressed()
+                        }, label: {
+                            Text("Submit")
+                        })
+                    }
+                })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    var content: some View {
+        Form {
+            TextField("Enter title", text: $title)
+            
+            TextField("Enter Company", text: $company)
+            
+            TextField("Enter Location", text: $location)
+            
+            DatePicker("Application Date", selection: $applyDate, displayedComponents: .date)
+                .accentColor(.purple)
+                .datePickerStyle(CompactDatePickerStyle())
+            
+            Toggle(isOn: $remote, label: {
+                Text("Remote")
+            })
+            .toggleStyle(CheckboxToggleStyle())
+            
+            TextField("URL (Optional)", text: $url)
+            TextField("Salary (Optional)", text: $salary)
+            
+            Picker(selection: $status, label: Text("Status"), content: /*@START_MENU_TOKEN@*/{
+                ForEach(ApplicationStatus.allCases) { status in
+                    Text(status.id.capitalized).tag(status)
+                }
+            }/*@END_MENU_TOKEN@*/)
+            
+            Section(header: Text("Notes")) {
+                TextEditor(text: $notes)
+            }
+        }
+        .autocapitalization(.none)
     }
     
     private func submitPressed() {
