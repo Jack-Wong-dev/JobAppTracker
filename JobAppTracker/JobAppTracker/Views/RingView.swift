@@ -45,12 +45,11 @@ struct RingView: View {
                     .resizable()
                     .frame(width: width, height: height)
                     .foregroundColor(.red)
+            } else {
+                Text("\(Int(percent))%")
+                    .font(.system(size: 14 * multipler))
+                    .fontWeight(.bold)
             }
-            
-            Text("\(Int(percent))%")
-                .font(.system(size: 14 * multipler))
-                .fontWeight(.bold)
-            
         }
     }
     
