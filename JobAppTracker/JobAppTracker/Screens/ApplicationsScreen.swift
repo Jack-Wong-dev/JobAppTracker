@@ -28,11 +28,13 @@ struct ApplicationsScreen: View {
             
             floatingActionButton
         }  /* ZStack */
+        .blur(radius: jobListVM.selectedJob != nil ? 3: 0)
         .disabled(jobListVM.selectedJob != nil)
         .overlay(
             Group {
                 if let jobToShow = jobListVM.selectedJob {
                     DetailScreen(jobInfo: jobToShow, namespace: namespace)
+                        .frame(maxWidth: 712)
                 }
             }
         )
