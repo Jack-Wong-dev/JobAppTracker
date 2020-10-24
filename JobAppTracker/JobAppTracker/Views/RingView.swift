@@ -18,26 +18,25 @@ struct RingView: View {
         determinePercentage()
     }
     
+    var multiplier: CGFloat {
+        width / 44
+    }
+    
     var body: some View {
-        
-        let multipler = width / 44
-        let progress = 1 - (percent / 100)
-        
-        return ZStack {
+        ZStack {
             Circle()
-                .stroke(Color.primary.opacity(0.1), style: StrokeStyle(lineWidth: 5 * multipler))
+                .stroke(Color.primary.opacity(0.1), style: StrokeStyle(lineWidth: 5 * multiplier))
                 .frame(width: width, height: height)
             
             Circle()
-                .trim(from: progress, to: 1)
+                .trim(from: 0, to: percent / 100.0)
                 .stroke(
                     LinearGradient(gradient: Gradient(colors: [Color(color1), Color(color2)]), startPoint: .topTrailing, endPoint: .bottomLeading),
-                    style: StrokeStyle(lineWidth: 5 * multipler, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20,0],
+                    style: StrokeStyle(lineWidth: 5 * multiplier, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20,0],
                                        dashPhase: 0))
-                .rotationEffect(Angle(degrees: 90))
-                .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
+                .rotationEffect(Angle(degrees: -90))
                 .frame(width: width, height: height)
-                .shadow(color: Color(color2).opacity(0.1), radius: 3 * multipler, x: 0, y: 3 * multipler)
+                .shadow(color: Color(color2).opacity(0.1), radius: 3 * multiplier, x: 0, y: 3 * multiplier)
             
             if status == .rejected {
                 Image(systemName: "xmark")
@@ -46,7 +45,7 @@ struct RingView: View {
                     .foregroundColor(.red)
             } else {
                 Text("\(Int(percent))%")
-                    .font(.system(size: 14 * multipler))
+                    .font(.system(size: 14 * multiplier))
                     .fontWeight(.bold)
             }
         }
