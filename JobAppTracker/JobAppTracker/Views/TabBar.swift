@@ -22,18 +22,19 @@ struct TabBar: View {
         
         GeometryReader { geo in
             ZStack {
+                
+                VStack {
+                    Color.clear
+                    Color.systemBackground
+                        .ignoresSafeArea()
+                        .frame(height: 16)
+                }
+                
                 Bar(tabItems: tabItems,
                     firstCenter: getFirstCenter(geo),
                     stepperToNextCenter: getStepperToNextCenter(geo))
-                    .foregroundColor(Color.systemBackground)
-                    .frame(width: geo.size.width, height: 50)
-                    .background(
-                        VStack {
-                            Color.clear
-                            Color.systemBackground.ignoresSafeArea()
-                        }
-                    )
-                
+                    .fill(Color.systemBackground)
+
                 
                 HStack(spacing: getSpacing(geo)) {
                     ForEach(0..<tabItems.items.count, id: \.self) { i in
@@ -45,8 +46,6 @@ struct TabBar: View {
                                 .padding(.all, padding)
                                 .background(Color.systemBackground)
                                 .clipShape(Circle())
-                            
-                               
                         }
                         .contentShape(Rectangle())
                         .onTapGesture {
@@ -62,6 +61,8 @@ struct TabBar: View {
             .frame(maxWidth: .infinity)
         }
         .frame(height: 50)
+        .ignoresSafeArea()
+
     }
     
     private func getSpacing(_ geo: GeometryProxy) -> CGFloat {
