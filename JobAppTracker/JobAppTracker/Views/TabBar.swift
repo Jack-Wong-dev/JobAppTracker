@@ -22,7 +22,6 @@ struct TabBar: View {
         
         GeometryReader { geo in
             ZStack {
-                
                 VStack {
                     Color.clear
                     Color.systemBackground
@@ -34,8 +33,8 @@ struct TabBar: View {
                     firstCenter: getFirstCenter(geo),
                     stepperToNextCenter: getStepperToNextCenter(geo))
                     .fill(Color.systemBackground)
+                    .frame(height: 50)
 
-                
                 HStack(spacing: getSpacing(geo)) {
                     ForEach(0..<tabItems.items.count, id: \.self) { i in
                         ZStack {
@@ -56,9 +55,9 @@ struct TabBar: View {
                         .offset(y: self.tabItems.items[i].offset)
                     }
                 }
-                .ignoresSafeArea()
             }
             .frame(maxWidth: .infinity)
+            .ignoresSafeArea(.keyboard)
         }
         .frame(height: 50)
         .ignoresSafeArea()

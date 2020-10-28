@@ -18,12 +18,20 @@ struct SearchScreen: View {
                     .foregroundColor(.gray)
                 TextField("Enter search term", text: $searchTerm)
             }
-            .modifier(TextFieldModifier())       
+            .modifier(TextFieldModifier())
+            .onTapGesture(count: 1, perform: {})
             
-            Spacer()
+            Spacer(minLength:70)
         }
         .padding()
+        .contentShape(Rectangle())
+        .onTapGesture(count: 1, perform: endEditing)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+    
+    private func endEditing() {
+        print("tapped anywhere")
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
