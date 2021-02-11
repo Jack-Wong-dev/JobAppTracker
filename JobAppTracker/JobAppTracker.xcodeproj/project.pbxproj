@@ -95,6 +95,56 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		0AE1B01025D4FDE4000999B1 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				0AF9C1C9252D235500D3B5D9 /* ApplicationsScreen.swift */,
+				0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		0AE1B01225D4FE2C000999B1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */,
+				0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0AE1B02925D4FE41000999B1 /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		0AE1B02B25D4FE51000999B1 /* AddJobApp */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */,
+			);
+			path = AddJobApp;
+			sourceTree = "<group>";
+		};
+		0AE1B02C25D4FE69000999B1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5B829252E5DFF0021593B /* DetailScreen.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0AE1B02D25D4FE73000999B1 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				0A112FD22533A54400B65DEF /* UpdateScreen.swift */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
 		0AF9C1A4252D22DC00D3B5D9 = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +172,6 @@
 				0AF9C1C4252D230600D3B5D9 /* Screens */,
 				0AF9C1C1252D22EB00D3B5D9 /* Models */,
 				0AF9C1C0252D22E600D3B5D9 /* Views */,
-				0AF9C1C2252D22F400D3B5D9 /* ViewModels */,
 				0AF9C1CF252D239800D3B5D9 /* Other */,
 				0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */,
 				0AF9C1B9252D22DE00D3B5D9 /* Info.plist */,
@@ -163,24 +212,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		0AF9C1C2252D22F400D3B5D9 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */,
-				0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		0AF9C1C4252D230600D3B5D9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */,
-				0AF9C1C9252D235500D3B5D9 /* ApplicationsScreen.swift */,
-				0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */,
-				0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */,
-				0AB5B829252E5DFF0021593B /* DetailScreen.swift */,
-				0A112FD22533A54400B65DEF /* UpdateScreen.swift */,
+				0AE1B01225D4FE2C000999B1 /* TabBar */,
+				0AE1B01025D4FDE4000999B1 /* Applications */,
+				0AE1B02B25D4FE51000999B1 /* AddJobApp */,
+				0AE1B02D25D4FE73000999B1 /* Update */,
+				0AE1B02C25D4FE69000999B1 /* Detail */,
+				0AE1B02925D4FE41000999B1 /* SearchScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
