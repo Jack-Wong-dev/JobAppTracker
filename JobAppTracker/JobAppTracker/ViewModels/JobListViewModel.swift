@@ -21,6 +21,8 @@ class JobListViewModel: ObservableObject {
     @Published var selectedJob: Job? = nil
     @Published var intent: UserIntent? = nil
     
+    @Published var lastSelectedJob: Job?
+    
     private var cancellables = Set<AnyCancellable>()
 //    @Published var job =
     
