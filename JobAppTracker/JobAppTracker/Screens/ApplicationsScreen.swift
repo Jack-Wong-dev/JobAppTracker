@@ -12,18 +12,21 @@ struct ApplicationsScreen: View {
     @Namespace var namespace
     @State private var columns = [GridItem(.adaptive(minimum: 300), spacing: 40)]
     
+    var jobSelected: Bool { jobListVM.selectedJob != nil }
+    
     var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .bottomTrailing) {
                 ScrollView(showsIndicators: false) {
                     JobGridView(namespace: namespace)
+                    
                     Spacer().frame(height: 70)
                 }
                 
-                floatingActionButton
+                FloatingActionButton(systemName: "plus.circle.fill", action: create)
             }  /* ZStack */
-            .blur(radius: jobListVM.selectedJob != nil ? 3: 0)
-            .disabled(jobListVM.selectedJob != nil)
+            .blur(radius: jobSelected ? 3: 0)
+            .disabled(jobSelected)
             .overlay(
                 Group {
                     if let jobToShow = jobListVM.selectedJob {
@@ -43,17 +46,25 @@ struct ApplicationsScreen: View {
         .environmentObject(jobListVM)
     }
     
-    var floatingActionButton: some View {
+    private func create() {
+        jobListVM.intent = .create
+    }
+}
+
+struct FloatingActionButton: View {
+    let systemName: String
+    var color = Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
+    let action: () -> Void
+    
+    var body: some View {
         VStack {
-            Button(action: {
-                jobListVM.intent = .create
-            }, label: {
+            Button(action: action) {
                 Image(systemName: "plus.circle.fill")
                     .resizable()
                     .foregroundColor(Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
                     .frame(width: 56, height: 56)
                     .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
-            })
+            }
             .buttonStyle(FABStyle())
             .padding(.horizontal)
             
