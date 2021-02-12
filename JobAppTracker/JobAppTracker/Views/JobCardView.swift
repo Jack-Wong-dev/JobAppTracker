@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct JobCard: View {
+struct JobCardView: View {
     let job : Job
-    
     var namespace: Namespace.ID
         
     var body: some View {
@@ -64,12 +63,11 @@ struct JobCard: View {
 }
 
 struct JobCard_Previews: PreviewProvider {
-    
     @Namespace static var ns
     
     static var previews: some View {
         VStack {
-            JobCard(job: jobData[0], namespace: ns)
+            JobCardView(job: jobData[0], namespace: ns)
                 .frame(width: 300, height: 200)
         }
     }

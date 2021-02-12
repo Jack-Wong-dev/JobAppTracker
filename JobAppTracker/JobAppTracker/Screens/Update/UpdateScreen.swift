@@ -10,6 +10,7 @@ import SwiftUI
 struct UpdateScreen: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var jobListVM: JobListViewModel
+    @EnvironmentObject var router: Router
 
     @State var job: Job
     
@@ -64,12 +65,10 @@ struct UpdateScreen: View {
         }
     }
     
-    private func updatePressed() {
-        print("update pressed")
-        
+    private func updatePressed() {        
         jobListVM.updateJob(job: job)
         jobListVM.selectedJob = nil
-//        completion(job)
+        router.showTabBar = true
         
         presentationMode.wrappedValue.dismiss()
     }

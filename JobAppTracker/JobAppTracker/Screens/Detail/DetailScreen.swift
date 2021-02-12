@@ -8,74 +8,71 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    
+    @EnvironmentObject var router: Router
     @EnvironmentObject var jobListVM: JobListViewModel
     
     @State private var showingAlert = false
     @State private var show = false
+    @State private var presentEditing = false
         
-    var jobInfo: Job
+    let job: Job
     var namespace: Namespace.ID
     
     var body: some View {
         ZStack(alignment: .bottom) {
             NeumorphicCard()
-                .matchedGeometryEffect(id: "Job \(String(describing: jobInfo.id))", in: namespace)
-            
-            VStack(alignment: .leading) {
-                //MARK: - Header
-                HStack(alignment: .top) {
+                .matchedGeometryEffect(id: "Job \(String(describing: job.id))", in: namespace)
+                .overlay(
                     VStack(alignment: .leading) {
-                        Text(jobInfo.title)
-                            .font(.title2).bold()
+                        //MARK: - Header
+                        HStack(alignment: .top) {
+                            VStack(alignment: .leading) {
+                                Text(job.title)
+                                    .font(.title2).bold()
+                                
+                                Text(job.companyName)
+                                    .font(Font.headline.weight(.bold))
+                                
+                                Text(job.location)
+                                    .font(Font.headline.weight(.semibold))
+                                
+                                if job.remote { Text("Remote") }
+                                
+                                if !job.salary.isEmpty { Text("Salary: \(job.salary)")  }
+                            } /* VStack */
+                            .font(Font.subheadline.weight(.semibold))
+                            
+                            Spacer()
+                            
+                            RingView(status: job.status, width: 60, height: 60)
+                        } /* HStack */
+                        .matchedGeometryEffect(id: "Header \(String(describing: job.id))", in: namespace)
                         
-                        Text(jobInfo.companyName)
-                            .font(Font.headline.weight(.bold))
+                        Text("Applied on: \(job.appliedDate.toString(.medium))")
+                            .font(Font.caption.weight(.semibold))
+                            .matchedGeometryEffect(id: "Date \(String(describing: job.id))", in: namespace)
                         
-                        Text(jobInfo.location)
-                            .font(Font.headline.weight(.semibold))
+                        HStack {
+                            Text("Status: ")
+                            Text(job.status.id.capitalized)
+                                .foregroundColor(Color(job.status.color))
+                                .fontWeight(.heavy)
+                        }
+                        .font(Font.callout.weight(.semibold))
+                        .matchedGeometryEffect(id: "Status \(String(describing: job.id))", in: namespace)
                         
-                        if jobInfo.remote == true {
-                            Text("Remote")
+                        if !job.notes.isEmpty {
+                            Text(job.notes)
+                                .font(Font.body.weight(.semibold))
+                                .opacity(show ? 1 : 0)
+                                .animation(Animation.easeOut.delay(0.4))
+                                .offset(y: show ? 0 : 20)
                         }
                         
-                        if !jobInfo.salary.isEmpty {
-                            Text("Salary: \(jobInfo.salary)")
-                        }
+                        Spacer(minLength: 70)
                     } /* VStack */
-                    .font(Font.subheadline.weight(.semibold))
-                    
-                    Spacer()
-                    
-                    RingView(status: jobInfo.status, width: 60, height: 60)
-                } /* HStack */
-                .matchedGeometryEffect(id: "Header \(String(describing: jobInfo.id))", in: namespace)
-                
-                Text("Applied on: \(jobInfo.appliedDate.toString(.medium))")
-                    .font(Font.caption.weight(.semibold))
-                    .matchedGeometryEffect(id: "Date \(String(describing: jobInfo.id))", in: namespace)
-                
-                HStack {
-                    Text("Status: ")
-                    
-                    Text(jobInfo.status.id.capitalized)
-                        .foregroundColor(Color(jobInfo.status.color))
-                        .fontWeight(.heavy)
-                }
-                .font(Font.callout.weight(.semibold))
-                .matchedGeometryEffect(id: "Status \(String(describing: jobInfo.id))", in: namespace)
-                
-                if !jobInfo.notes.isEmpty {
-                    Text(jobInfo.notes)
-                        .font(Font.body.weight(.semibold))
-                        .opacity(show ? 1 : 0)
-                        .animation(Animation.easeOut.delay(0.4))
-                        .offset(y: show ? 0 : 20)
-                }
-                
-                Spacer(minLength: 70)
-            } /* VStack */
-            .padding()
+                    .padding()
+                )
             
             floatingActionButtons
                 .opacity(show ? 1 : 0)
@@ -83,18 +80,17 @@ struct DetailScreen: View {
                 .offset(y: show ? 0 : 20)
         } /* ZStack */
         .animation(.easeOut) //Opening animation
-        .onAppear(perform: {
-            show.toggle()
-        })
+        .onAppear(perform: onAppear)
+        .fullScreenCover(isPresented: $presentEditing) {
+            UpdateScreen(job: job)
+        }
     }
     
     var floatingActionButtons: some View {
         VStack {
             HStack {
                 //MARK: - Delete Button
-                Button {
-                    showingAlert = true
-                } label: {
+                Button(action: showAlert) {
                     Image(systemName: "trash.circle.fill")
                         .resizable()
                         .frame(width: 56, height: 56)
@@ -106,19 +102,14 @@ struct DetailScreen: View {
                     Alert(
                         title: Text("Are you sure you want to delete this?"),
                         message: Text("You cannot undo this."),
-                        primaryButton: .destructive(Text("Delete")) {
-                            print("Deleting...")
-                            deleteAction()
-                        },
+                        primaryButton: .destructive(Text("Delete"), action: deleteAction),
                         secondaryButton: .cancel())
                 }
                 
                 Spacer()
                 
                 //MARK: - Exit Button
-                Button {
-                    jobListVM.selectedJob = nil
-                } label: {
+                Button(action: exit) {
                     Image(systemName: "xmark.circle.fill")
                         .resizable()
                         .frame(width: 56, height: 56)
@@ -130,9 +121,7 @@ struct DetailScreen: View {
                 Spacer()
                 
                 //MARK: - Update Button
-                Button {
-                    jobListVM.intent = .update
-                } label: {
+                Button(action: startEditing) {
                     Image(systemName: "pencil.circle.fill")
                         .resizable()
                         .frame(width: 56, height: 56)
@@ -143,14 +132,38 @@ struct DetailScreen: View {
                 
             } /* HStack */
             .padding(.horizontal)
-            
-            Spacer().frame(height: 70)
         } /* VStack */
     }
     
     //MARK:- Methods
+    private func onAppear() {
+        show.toggle()
+    }
+    
     private func deleteAction() {
-        jobListVM.deleteJob(job: jobInfo)
+        jobListVM.deleteJob(job: job)
         jobListVM.selectedJob = nil
+        revealTabBar()
+    }
+    
+    private func showAlert() {
+        showingAlert = true
+    }
+    
+    private func startEditing() {
+        presentEditing = true
+    }
+    
+    private func exit() {
+        jobListVM.selectedJob = nil
+        revealTabBar()
+    }
+    
+    private func revealTabBar() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation {
+                router.showTabBar = true
+            }
+        }
     }
 }

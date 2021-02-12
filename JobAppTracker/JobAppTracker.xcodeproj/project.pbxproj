@@ -7,31 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A042EB725D5A3B900F92314 /* Image-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EB625D5A3B900F92314 /* Image-Extension.swift */; };
+		0A042EBF25D5C72C00F92314 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EBE25D5C72C00F92314 /* VisualEffectBlur.swift */; };
+		0A042EC225D5E6D200F92314 /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EC125D5E6D200F92314 /* Unwrap.swift */; };
+		0A042EE025D6103900F92314 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EDF25D6103900F92314 /* CustomTabBar.swift */; };
+		0A042EE825D6161E00F92314 /* RaisedAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EE725D6161E00F92314 /* RaisedAddButton.swift */; };
+		0A042EF125D6236100F92314 /* CreateNewBehavorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */; };
+		0A042EF725D62E8C00F92314 /* CreateNewJobAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */; };
 		0A112FD32533A54400B65DEF /* UpdateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FD22533A54400B65DEF /* UpdateScreen.swift */; };
 		0A112FEB2533BEC100B65DEF /* ApplicationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */; };
 		0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */; };
 		0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */; };
 		0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */; };
-		0A1A264E252D7A36009BDDB9 /* AddJobAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */; };
+		0A1A264E252D7A36009BDDB9 /* CreateNewJobAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */; };
 		0A1BE1CB25341CAD00F2A1CA /* FABStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1BE1CA25341CAD00F2A1CA /* FABStyle.swift */; };
 		0A4CD23D2531712900E3B728 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */; };
 		0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B826252E5AF80021593B /* Date-Extension.swift */; };
 		0AB5B82A252E5DFF0021593B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B829252E5DFF0021593B /* DetailScreen.swift */; };
 		0AC4A0BF253C108500249F33 /* NeumorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */; };
+		0AE1B03025D50858000999B1 /* CustomTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */; };
+		0AE1B03325D50877000999B1 /* FloatingActionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */; };
+		0AE1B03625D5088A000999B1 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03525D5088A000999B1 /* TabBarButton.swift */; };
+		0AE1B03925D50897000999B1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03825D50897000999B1 /* Router.swift */; };
 		0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */; };
 		0AF9C1B5252D22DE00D3B5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */; };
 		0AF9C1B8252D22DE00D3B5D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */; };
-		0AF9C1C6252D232800D3B5D9 /* TabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */; };
 		0AF9C1CA252D235500D3B5D9 /* ApplicationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1C9252D235500D3B5D9 /* ApplicationsScreen.swift */; };
 		0AF9C1CD252D237800D3B5D9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1CC252D237800D3B5D9 /* Job.swift */; };
 		0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */; };
 		0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */; };
-		0AF9C1D7252D241200D3B5D9 /* JobCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D6252D241200D3B5D9 /* JobCard.swift */; };
+		0AF9C1D7252D241200D3B5D9 /* JobCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D6252D241200D3B5D9 /* JobCardView.swift */; };
 		0AF9C1DA252D242700D3B5D9 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D9252D242700D3B5D9 /* RingView.swift */; };
-		0AF9C1DD252D252000D3B5D9 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1DC252D252000D3B5D9 /* TabBar.swift */; };
-		0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E1252D257200D3B5D9 /* Bar.swift */; };
 		0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */; };
-		0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */; };
 		0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */; };
 		0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */; };
 		0AF9C1F7252D535600D3B5D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */; };
@@ -39,33 +46,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A042EB625D5A3B900F92314 /* Image-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image-Extension.swift"; sourceTree = "<group>"; };
+		0A042EBE25D5C72C00F92314 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		0A042EC125D5E6D200F92314 /* Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
+		0A042EDF25D6103900F92314 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		0A042EE725D6161E00F92314 /* RaisedAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedAddButton.swift; sourceTree = "<group>"; };
+		0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewBehavorialScreen.swift; sourceTree = "<group>"; };
+		0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewJobAppViewModel.swift; sourceTree = "<group>"; };
 		0A112FD22533A54400B65DEF /* UpdateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScreen.swift; sourceTree = "<group>"; };
 		0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatus.swift; sourceTree = "<group>"; };
 		0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
 		0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifier.swift; sourceTree = "<group>"; };
-		0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobAppScreen.swift; sourceTree = "<group>"; };
+		0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewJobAppScreen.swift; sourceTree = "<group>"; };
 		0A1BE1CA25341CAD00F2A1CA /* FABStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABStyle.swift; sourceTree = "<group>"; };
 		0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		0AB5B826252E5AF80021593B /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		0AB5B829252E5DFF0021593B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicCard.swift; sourceTree = "<group>"; };
+		0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarScreen.swift; sourceTree = "<group>"; };
+		0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionMenu.swift; sourceTree = "<group>"; };
+		0AE1B03525D5088A000999B1 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		0AE1B03825D50897000999B1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0AF9C1AD252D22DC00D3B5D9 /* JobAppTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobAppTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAppTrackerApp.swift; sourceTree = "<group>"; };
 		0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0AF9C1B9252D22DE00D3B5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarScreen.swift; sourceTree = "<group>"; };
 		0AF9C1C9252D235500D3B5D9 /* ApplicationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsScreen.swift; sourceTree = "<group>"; };
 		0AF9C1CC252D237800D3B5D9 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
 		0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViewModifier.swift; sourceTree = "<group>"; };
-		0AF9C1D6252D241200D3B5D9 /* JobCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCard.swift; sourceTree = "<group>"; };
+		0AF9C1D6252D241200D3B5D9 /* JobCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardView.swift; sourceTree = "<group>"; };
 		0AF9C1D9252D242700D3B5D9 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
-		0AF9C1DC252D252000D3B5D9 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		0AF9C1E1252D257200D3B5D9 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
 		0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -86,6 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A042EB525D5A3AF00F92314 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A042EB625D5A3B900F92314 /* Image-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A042EDE25D6102100F92314 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */,
+				0AE1B03525D5088A000999B1 /* TabBarButton.swift */,
+				0A042EDF25D6103900F92314 /* CustomTabBar.swift */,
+				0A042EE725D6161E00F92314 /* RaisedAddButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A042EEA25D622F300F92314 /* Behavorial */ = {
+			isa = PBXGroup;
+			children = (
+				0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */,
+			);
+			path = Behavorial;
+			sourceTree = "<group>";
+		};
 		0A4CD23B2531711500E3B728 /* Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +148,9 @@
 		0AE1B01225D4FE2C000999B1 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */,
-				0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */,
+				0A042EDE25D6102100F92314 /* Views */,
+				0AE1B03825D50897000999B1 /* Router.swift */,
+				0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -124,7 +166,8 @@
 		0AE1B02B25D4FE51000999B1 /* AddJobApp */ = {
 			isa = PBXGroup;
 			children = (
-				0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */,
+				0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */,
+				0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */,
 			);
 			path = AddJobApp;
 			sourceTree = "<group>";
@@ -193,11 +236,11 @@
 			isa = PBXGroup;
 			children = (
 				0A4CD23B2531711500E3B728 /* Style */,
-				0AF9C1DF252D253500D3B5D9 /* Shapes */,
-				0AF9C1D6252D241200D3B5D9 /* JobCard.swift */,
+				0AF9C1D6252D241200D3B5D9 /* JobCardView.swift */,
 				0AF9C1D9252D242700D3B5D9 /* RingView.swift */,
-				0AF9C1DC252D252000D3B5D9 /* TabBar.swift */,
 				0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */,
+				0A042EBE25D5C72C00F92314 /* VisualEffectBlur.swift */,
+				0A042EC125D5E6D200F92314 /* Unwrap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +258,7 @@
 		0AF9C1C4252D230600D3B5D9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0A042EEA25D622F300F92314 /* Behavorial */,
 				0AE1B01225D4FE2C000999B1 /* TabBar */,
 				0AE1B01025D4FDE4000999B1 /* Applications */,
 				0AE1B02B25D4FE51000999B1 /* AddJobApp */,
@@ -228,20 +272,13 @@
 		0AF9C1CF252D239800D3B5D9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				0A042EB525D5A3AF00F92314 /* Extensions */,
 				0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */,
 				0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */,
 				0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */,
 				0AB5B826252E5AF80021593B /* Date-Extension.swift */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		0AF9C1DF252D253500D3B5D9 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				0AF9C1E1252D257200D3B5D9 /* Bar.swift */,
-			);
-			path = Shapes;
 			sourceTree = "<group>";
 		};
 		0AF9C1EE252D2B4900D3B5D9 /* Repository */ = {
@@ -385,29 +422,36 @@
 			files = (
 				0AB5B82A252E5DFF0021593B /* DetailScreen.swift in Sources */,
 				0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */,
+				0A042EE025D6103900F92314 /* CustomTabBar.swift in Sources */,
 				0AC4A0BF253C108500249F33 /* NeumorphicCard.swift in Sources */,
 				0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */,
+				0A042EC225D5E6D200F92314 /* Unwrap.swift in Sources */,
 				0A112FD32533A54400B65DEF /* UpdateScreen.swift in Sources */,
 				0A112FEB2533BEC100B65DEF /* ApplicationStatus.swift in Sources */,
 				0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */,
 				0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */,
+				0A042EF125D6236100F92314 /* CreateNewBehavorialScreen.swift in Sources */,
 				0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */,
 				0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */,
-				0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */,
+				0AE1B03025D50858000999B1 /* CustomTabBarScreen.swift in Sources */,
 				0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */,
 				0AF9C1DA252D242700D3B5D9 /* RingView.swift in Sources */,
 				0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */,
+				0AE1B03325D50877000999B1 /* FloatingActionMenu.swift in Sources */,
 				0A4CD23D2531712900E3B728 /* CheckboxToggleStyle.swift in Sources */,
 				0AF9C1CA252D235500D3B5D9 /* ApplicationsScreen.swift in Sources */,
-				0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */,
-				0AF9C1C6252D232800D3B5D9 /* TabBarScreen.swift in Sources */,
-				0A1A264E252D7A36009BDDB9 /* AddJobAppScreen.swift in Sources */,
+				0A042EE825D6161E00F92314 /* RaisedAddButton.swift in Sources */,
+				0A042EB725D5A3B900F92314 /* Image-Extension.swift in Sources */,
+				0A1A264E252D7A36009BDDB9 /* CreateNewJobAppScreen.swift in Sources */,
+				0AE1B03925D50897000999B1 /* Router.swift in Sources */,
 				0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */,
 				0A1BE1CB25341CAD00F2A1CA /* FABStyle.swift in Sources */,
-				0AF9C1D7252D241200D3B5D9 /* JobCard.swift in Sources */,
+				0AF9C1D7252D241200D3B5D9 /* JobCardView.swift in Sources */,
+				0A042EBF25D5C72C00F92314 /* VisualEffectBlur.swift in Sources */,
+				0AE1B03625D5088A000999B1 /* TabBarButton.swift in Sources */,
 				0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */,
 				0AF9C1CD252D237800D3B5D9 /* Job.swift in Sources */,
-				0AF9C1DD252D252000D3B5D9 /* TabBar.swift in Sources */,
+				0A042EF725D62E8C00F92314 /* CreateNewJobAppViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
