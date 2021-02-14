@@ -23,7 +23,7 @@ struct CustomTabBar: View {
                 TabBarButton(screen: .profile)
             }
             .frame(maxWidth: .infinity)
-            .background(Color.systemBackground.ignoresSafeArea(edges: .bottom))
+            .background(Color.systemBackground.ignoresSafeArea(edges: [.horizontal, .bottom]))
             .transition(.move(edge: .bottom))
             
             if showMenu {

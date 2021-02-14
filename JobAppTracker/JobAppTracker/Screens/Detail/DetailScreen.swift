@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailScreen: View {
     @EnvironmentObject var router: Router
     @EnvironmentObject var jobListVM: JobListViewModel
+    @ScaledMetric private var imageSize: CGFloat = 48
     
     @State private var showingAlert = false
     @State private var show = false
@@ -69,7 +70,7 @@ struct DetailScreen: View {
                                 .offset(y: show ? 0 : 20)
                         }
                         
-                        Spacer(minLength: 70)
+                        Spacer(minLength: 0)
                     } /* VStack */
                     .padding()
                 )
@@ -93,7 +94,7 @@ struct DetailScreen: View {
                 Button(action: showAlert) {
                     Image(systemName: "trash.circle.fill")
                         .resizable()
-                        .frame(width: 56, height: 56)
+                        .frame(width: imageSize, height: imageSize)
                         .foregroundColor(Color.orange)
                         .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
                 }
@@ -112,7 +113,7 @@ struct DetailScreen: View {
                 Button(action: exit) {
                     Image(systemName: "xmark.circle.fill")
                         .resizable()
-                        .frame(width: 56, height: 56)
+                        .frame(width: imageSize, height: imageSize)
                         .foregroundColor(Color.orange)
                         .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
                 }
@@ -124,7 +125,7 @@ struct DetailScreen: View {
                 Button(action: startEditing) {
                     Image(systemName: "pencil.circle.fill")
                         .resizable()
-                        .frame(width: 56, height: 56)
+                        .frame(width: imageSize, height: imageSize)
                         .foregroundColor(Color.orange)
                         .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
                 }

@@ -8,16 +8,43 @@
 import SwiftUI
 
 struct CustomTabBarScreen: View {
-    @StateObject var router: Router
+    @EnvironmentObject var router: Router
+    @State private var tabBarHeight: CGFloat?
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             VStack {
                 CurrentScreen()
-                
-                if router.showTabBar { CustomTabBar() }
+                Spacer().frame(height: tabBarHeight)
             }
-            .environmentObject(router)
+            
+            if router.showTabBar {
+                CustomTabBar()
+                    .background(
+                        GeometryReader { proxy in
+                            Color.clear.preference(
+                                key: TabBarPreferenceKey.self,
+                                value: proxy.size.height
+                            )
+                        }
+                    )
+            }
+        }
+        .background(Color.background.ignoresSafeArea())
+        .onPreferenceChange(TabBarPreferenceKey.self) {
+            tabBarHeight = $0
+        }
+        .environmentObject(router)
+    }
+}
+
+private extension CustomTabBarScreen {
+    struct TabBarPreferenceKey: PreferenceKey {
+        static let defaultValue: CGFloat = 0
+        
+        static func reduce(value: inout CGFloat,
+                           nextValue: () -> CGFloat) {
+            value = max(value, nextValue())
         }
     }
 }

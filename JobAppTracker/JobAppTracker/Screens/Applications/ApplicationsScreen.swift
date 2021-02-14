@@ -20,40 +20,23 @@ struct ApplicationsScreen: View {
             ZStack(alignment: .bottomTrailing) {
                 ScrollView(showsIndicators: false) {
                     JobGridView(namespace: namespace)
-                    
-                    Spacer().frame(height: 70)
+                        .padding(.top, proxy.safeAreaInsets.top)
+                        .padding(.bottom, proxy.safeAreaInsets.bottom)
+                        .padding(.leading, proxy.safeAreaInsets.leading)
+                        .padding(.trailing, proxy.safeAreaInsets.trailing)
                 }
+                .ignoresSafeArea()
             }  /* ZStack */
             .blur(radius: jobSelected ? 3: 0)
             .disabled(jobSelected)
             .overlay(
                 Unwrap(jobListVM.selectedJob) { job in
                     DetailScreen(job: job, namespace: namespace)
-                        .frame(maxWidth: 712)
+                        .frame(maxWidth: min(proxy.size.width * 0.85, 712), maxHeight: proxy.size.height * 0.75)
                 }
             )
         }
         .environmentObject(jobListVM)
-    }
-}
-
-struct FloatingActionButton: View {
-    let systemName: String
-    var color = Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
-    let action: () -> Void
-    
-    var body: some View {
-        VStack {
-            Button(action: action) {
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .foregroundColor(Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
-                    .frame(width: 56, height: 56)
-                    .shadow(color: Color.shadow, radius: 5, x: 5, y: 5)
-            }
-            .buttonStyle(FABStyle())
-            .padding(.horizontal)
-        }
     }
 }
 

@@ -20,7 +20,6 @@ struct SearchScreen: View {
             .modifier(TextFieldModifier())
             .onTapGesture(count: 1, perform: {})
             
-            Spacer(minLength:70)
         }
         .padding()
         .contentShape(Rectangle())

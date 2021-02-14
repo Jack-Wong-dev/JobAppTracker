@@ -17,8 +17,8 @@ struct JobAppTrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            TabBarScreen()
-            CustomTabBarScreen(router: router)
+            CustomTabBarScreen()
+                .environmentObject(router)
                 .environmentObject(jobRepository)
         }
     }
