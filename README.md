@@ -31,7 +31,7 @@ Job Application Tracker
 * <strike> Launch Screen in Light/Dark mode </strike>
 * <strike> Firebase setup </strike>
 * <strike> Anonymous sign in </strike>
-* Implement ability to transition from anoymous to permanent
+* Implement ability to transition from anoymous account to permanent account
 * <strike> Finish all CRUD implementation</strike>
 * <strike> Hero Animation using '.matchedGeometryEffect' </strike> 
 * Size Classes?
