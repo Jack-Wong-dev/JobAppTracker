@@ -49,7 +49,13 @@ class JobRepository: ObservableObject {
         do {
             var addedJob = job
             addedJob.userId = Auth.auth().currentUser?.uid
-            let _ = try db.collection("jobs").addDocument(from: addedJob)
+            let _ = try db.collection("jobs").addDocument(from: addedJob) { error in
+                if let error = error {
+                    print("unable to encode task: \(error.localizedDescription)")
+                } else {
+                    print("Added Successfully")
+                }
+            }
         }
         catch {
             fatalError("unable to encode task: \(error.localizedDescription)")
@@ -59,7 +65,13 @@ class JobRepository: ObservableObject {
     func updateJob(_ job: Job)  {
         if let docId = job.id {
             do {
-                try db.collection("jobs").document(docId).setData(from: job)
+                try db.collection("jobs").document(docId).setData(from: job) { error in
+                    if let error = error {
+                        print("unable to encode task: \(error.localizedDescription)")
+                    } else {
+                        print("Update Successful")
+                    }
+                }
             }
             catch {
                 fatalError("unable to encode task: \(error.localizedDescription)")

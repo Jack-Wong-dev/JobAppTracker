@@ -24,7 +24,7 @@ struct DetailScreen: View {
             NeumorphicCard()
                 .matchedGeometryEffect(id: "Job \(String(describing: job.id))", in: namespace)
                 .overlay(
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 20) {
                         //MARK: - Header
                         HStack(alignment: .top) {
                             VStack(alignment: .leading) {
@@ -66,7 +66,6 @@ struct DetailScreen: View {
                             Text(job.notes)
                                 .font(Font.body.weight(.semibold))
                                 .opacity(show ? 1 : 0)
-                                .animation(Animation.easeOut.delay(0.4))
                                 .offset(y: show ? 0 : 20)
                         }
                         
@@ -77,10 +76,8 @@ struct DetailScreen: View {
             
             floatingActionButtons
                 .opacity(show ? 1 : 0)
-                .animation(Animation.easeOut.delay(0.4))
                 .offset(y: show ? 0 : 20)
         } /* ZStack */
-        .animation(.easeOut) //Opening animation
         .onAppear(perform: onAppear)
         .fullScreenCover(isPresented: $presentEditing) {
             UpdateScreen(job: job)
@@ -138,12 +135,17 @@ struct DetailScreen: View {
     
     //MARK:- Methods
     private func onAppear() {
-        show.toggle()
+        withAnimation(Animation.easeOut.delay(0.4)) {
+            show.toggle()
+        }
     }
     
     private func deleteAction() {
-        jobListVM.deleteJob(job: job)
-        jobListVM.selectedJob = nil
+        withAnimation(.easeInOut) {
+            jobListVM.deleteJob(job: job)
+            jobListVM.selectedJob = nil
+        }
+        
         revealTabBar()
     }
     
@@ -156,15 +158,15 @@ struct DetailScreen: View {
     }
     
     private func exit() {
-        jobListVM.selectedJob = nil
+        withAnimation(.easeInOut) {
+            jobListVM.selectedJob = nil
+        }
         revealTabBar()
     }
     
     private func revealTabBar() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            withAnimation {
-                router.showTabBar = true
-            }
+        withAnimation(Animation.easeInOut.delay(0.2)) {
+            router.showTabBar = true
         }
     }
 }

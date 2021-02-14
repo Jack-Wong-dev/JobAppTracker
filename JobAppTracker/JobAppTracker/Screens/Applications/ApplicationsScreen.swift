@@ -32,7 +32,7 @@ struct ApplicationsScreen: View {
             .overlay(
                 Unwrap(jobListVM.selectedJob) { job in
                     DetailScreen(job: job, namespace: namespace)
-                        .frame(maxWidth: min(proxy.size.width * 0.85, 712), maxHeight: proxy.size.height * 0.75)
+                        .frame(maxWidth: proxy.size.width * 0.85, maxHeight: proxy.size.height * 0.85)
                 }
             )
         }
@@ -51,14 +51,12 @@ struct JobGridView: View {
             ForEach(jobListVM.jobsList) { job in
                 if job.id != jobListVM.selectedJob?.id {
                     JobCard(job: job, namespace: namespace)
-                        .animation(.easeInOut) //Closing animation
                         .zIndex(job.id == jobListVM.lastSelectedJob?.id ? 2 : 1)
                     /* Logic for zIndex is required to prevent card from being
                      behind other cards when going from DetailScreen back to card */
                 } else {
                     Color.clear
                         .frame(height: 200)
-                        .animation(.easeInOut) //Closing animation
                 }
             }  /* ForEach */
         } /* LazyVGrid */
@@ -85,12 +83,12 @@ struct JobCard: View {
     }
     
     private func selectCard() {
-        jobListVM.selectedJob = job
-        jobListVM.lastSelectedJob = job
-        
-        DispatchQueue.main.async {
-            router.showTabBar = false
+        withAnimation(.easeOut) {
+            jobListVM.selectedJob = job
+            jobListVM.lastSelectedJob = job
         }
+  
+        withAnimation { router.showTabBar = false }
     }
 }
 
