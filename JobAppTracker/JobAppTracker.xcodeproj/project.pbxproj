@@ -3,75 +3,89 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A042EB725D5A3B900F92314 /* Image-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EB625D5A3B900F92314 /* Image-Extension.swift */; };
+		0A042EBF25D5C72C00F92314 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EBE25D5C72C00F92314 /* VisualEffectBlur.swift */; };
+		0A042EC225D5E6D200F92314 /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EC125D5E6D200F92314 /* Unwrap.swift */; };
+		0A042EE025D6103900F92314 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EDF25D6103900F92314 /* CustomTabBar.swift */; };
+		0A042EE825D6161E00F92314 /* RaisedAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EE725D6161E00F92314 /* RaisedAddButton.swift */; };
+		0A042EF125D6236100F92314 /* CreateNewBehavorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */; };
+		0A042EF725D62E8C00F92314 /* CreateNewJobAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */; };
+		0A042EFC25D6603100F92314 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042EFB25D6603100F92314 /* FirebaseAnalytics */; };
+		0A042EFE25D6603100F92314 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042EFD25D6603100F92314 /* FirebaseFirestoreSwift-Beta */; };
+		0A042F0025D6603100F92314 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042EFF25D6603100F92314 /* FirebaseAuth */; };
+		0A042F0225D6603100F92314 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042F0125D6603100F92314 /* FirebaseFirestore */; };
 		0A112FD32533A54400B65DEF /* UpdateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FD22533A54400B65DEF /* UpdateScreen.swift */; };
 		0A112FEB2533BEC100B65DEF /* ApplicationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */; };
 		0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */; };
 		0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */; };
 		0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */; };
-		0A1A264E252D7A36009BDDB9 /* AddJobAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */; };
+		0A1A264E252D7A36009BDDB9 /* CreateNewJobAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */; };
 		0A1BE1CB25341CAD00F2A1CA /* FABStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1BE1CA25341CAD00F2A1CA /* FABStyle.swift */; };
 		0A4CD23D2531712900E3B728 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */; };
 		0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B826252E5AF80021593B /* Date-Extension.swift */; };
 		0AB5B82A252E5DFF0021593B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B829252E5DFF0021593B /* DetailScreen.swift */; };
 		0AC4A0BF253C108500249F33 /* NeumorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */; };
+		0AE1B03025D50858000999B1 /* CustomTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */; };
+		0AE1B03325D50877000999B1 /* FloatingActionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */; };
+		0AE1B03625D5088A000999B1 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03525D5088A000999B1 /* TabBarButton.swift */; };
+		0AE1B03925D50897000999B1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03825D50897000999B1 /* Router.swift */; };
 		0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */; };
 		0AF9C1B5252D22DE00D3B5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */; };
 		0AF9C1B8252D22DE00D3B5D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */; };
-		0AF9C1C6252D232800D3B5D9 /* TabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */; };
 		0AF9C1CA252D235500D3B5D9 /* ApplicationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1C9252D235500D3B5D9 /* ApplicationsScreen.swift */; };
 		0AF9C1CD252D237800D3B5D9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1CC252D237800D3B5D9 /* Job.swift */; };
 		0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */; };
 		0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */; };
-		0AF9C1D7252D241200D3B5D9 /* JobCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D6252D241200D3B5D9 /* JobCard.swift */; };
+		0AF9C1D7252D241200D3B5D9 /* JobCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D6252D241200D3B5D9 /* JobCardView.swift */; };
 		0AF9C1DA252D242700D3B5D9 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1D9252D242700D3B5D9 /* RingView.swift */; };
-		0AF9C1DD252D252000D3B5D9 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1DC252D252000D3B5D9 /* TabBar.swift */; };
-		0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E1252D257200D3B5D9 /* Bar.swift */; };
 		0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */; };
-		0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */; };
 		0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */; };
 		0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */; };
 		0AF9C1F7252D535600D3B5D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */; };
-		3E521AC7F32F2EBCB9F61165 /* Pods_JobAppTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B9F632D610A5BD4C866D95 /* Pods_JobAppTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A042EB625D5A3B900F92314 /* Image-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image-Extension.swift"; sourceTree = "<group>"; };
+		0A042EBE25D5C72C00F92314 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		0A042EC125D5E6D200F92314 /* Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
+		0A042EDF25D6103900F92314 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		0A042EE725D6161E00F92314 /* RaisedAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedAddButton.swift; sourceTree = "<group>"; };
+		0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewBehavorialScreen.swift; sourceTree = "<group>"; };
+		0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewJobAppViewModel.swift; sourceTree = "<group>"; };
 		0A112FD22533A54400B65DEF /* UpdateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScreen.swift; sourceTree = "<group>"; };
 		0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatus.swift; sourceTree = "<group>"; };
 		0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
 		0A1A2647252D67CA009BDDB9 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifier.swift; sourceTree = "<group>"; };
-		0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobAppScreen.swift; sourceTree = "<group>"; };
+		0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewJobAppScreen.swift; sourceTree = "<group>"; };
 		0A1BE1CA25341CAD00F2A1CA /* FABStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABStyle.swift; sourceTree = "<group>"; };
 		0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		0AB5B826252E5AF80021593B /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		0AB5B829252E5DFF0021593B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicCard.swift; sourceTree = "<group>"; };
+		0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarScreen.swift; sourceTree = "<group>"; };
+		0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionMenu.swift; sourceTree = "<group>"; };
+		0AE1B03525D5088A000999B1 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		0AE1B03825D50897000999B1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0AF9C1AD252D22DC00D3B5D9 /* JobAppTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobAppTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF9C1B0252D22DC00D3B5D9 /* JobAppTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAppTrackerApp.swift; sourceTree = "<group>"; };
 		0AF9C1B4252D22DE00D3B5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AF9C1B7252D22DE00D3B5D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0AF9C1B9252D22DE00D3B5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarScreen.swift; sourceTree = "<group>"; };
 		0AF9C1C9252D235500D3B5D9 /* ApplicationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsScreen.swift; sourceTree = "<group>"; };
 		0AF9C1CC252D237800D3B5D9 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
 		0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicViewModifier.swift; sourceTree = "<group>"; };
-		0AF9C1D6252D241200D3B5D9 /* JobCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCard.swift; sourceTree = "<group>"; };
+		0AF9C1D6252D241200D3B5D9 /* JobCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardView.swift; sourceTree = "<group>"; };
 		0AF9C1D9252D242700D3B5D9 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
-		0AF9C1DC252D252000D3B5D9 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		0AF9C1E1252D257200D3B5D9 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		0AF9C1E4252D258F00D3B5D9 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		0AF9C1EB252D28EF00D3B5D9 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		0AF9C1EF252D2B6400D3B5D9 /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
 		0AF9C1F6252D535600D3B5D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4C7B6D77E730C699D63781D8 /* Pods-JobAppTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobAppTracker.debug.xcconfig"; path = "Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		CB610FDBE1139892F3240045 /* Pods-JobAppTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobAppTracker.release.xcconfig"; path = "Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker.release.xcconfig"; sourceTree = "<group>"; };
-		D9B9F632D610A5BD4C866D95 /* Pods_JobAppTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobAppTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +93,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E521AC7F32F2EBCB9F61165 /* Pods_JobAppTracker.framework in Frameworks */,
+				0A042EFC25D6603100F92314 /* FirebaseAnalytics in Frameworks */,
+				0A042F0225D6603100F92314 /* FirebaseFirestore in Frameworks */,
+				0A042F0025D6603100F92314 /* FirebaseAuth in Frameworks */,
+				0A042EFE25D6603100F92314 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A042EB525D5A3AF00F92314 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A042EB625D5A3B900F92314 /* Image-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A042EDE25D6102100F92314 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */,
+				0AE1B03525D5088A000999B1 /* TabBarButton.swift */,
+				0A042EDF25D6103900F92314 /* CustomTabBar.swift */,
+				0A042EE725D6161E00F92314 /* RaisedAddButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A042EEA25D622F300F92314 /* Behavorial */ = {
+			isa = PBXGroup;
+			children = (
+				0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */,
+			);
+			path = Behavorial;
+			sourceTree = "<group>";
+		};
 		0A4CD23B2531711500E3B728 /* Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +151,9 @@
 		0AE1B01225D4FE2C000999B1 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				0AF9C1C5252D232800D3B5D9 /* TabBarScreen.swift */,
-				0AF9C1E7252D25D000D3B5D9 /* TabItems.swift */,
+				0A042EDE25D6102100F92314 /* Views */,
+				0AE1B03825D50897000999B1 /* Router.swift */,
+				0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -124,7 +169,8 @@
 		0AE1B02B25D4FE51000999B1 /* AddJobApp */ = {
 			isa = PBXGroup;
 			children = (
-				0A1A264D252D7A36009BDDB9 /* AddJobAppScreen.swift */,
+				0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */,
+				0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */,
 			);
 			path = AddJobApp;
 			sourceTree = "<group>";
@@ -150,8 +196,6 @@
 			children = (
 				0AF9C1AF252D22DC00D3B5D9 /* JobAppTracker */,
 				0AF9C1AE252D22DC00D3B5D9 /* Products */,
-				BE1BDCE9781E57A77183DE6B /* Pods */,
-				AD4F1C6334EDA17C2CF13443 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,11 +237,11 @@
 			isa = PBXGroup;
 			children = (
 				0A4CD23B2531711500E3B728 /* Style */,
-				0AF9C1DF252D253500D3B5D9 /* Shapes */,
-				0AF9C1D6252D241200D3B5D9 /* JobCard.swift */,
+				0AF9C1D6252D241200D3B5D9 /* JobCardView.swift */,
 				0AF9C1D9252D242700D3B5D9 /* RingView.swift */,
-				0AF9C1DC252D252000D3B5D9 /* TabBar.swift */,
 				0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */,
+				0A042EBE25D5C72C00F92314 /* VisualEffectBlur.swift */,
+				0A042EC125D5E6D200F92314 /* Unwrap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +259,7 @@
 		0AF9C1C4252D230600D3B5D9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0A042EEA25D622F300F92314 /* Behavorial */,
 				0AE1B01225D4FE2C000999B1 /* TabBar */,
 				0AE1B01025D4FDE4000999B1 /* Applications */,
 				0AE1B02B25D4FE51000999B1 /* AddJobApp */,
@@ -228,20 +273,13 @@
 		0AF9C1CF252D239800D3B5D9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				0A042EB525D5A3AF00F92314 /* Extensions */,
 				0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */,
 				0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */,
 				0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */,
 				0AB5B826252E5AF80021593B /* Date-Extension.swift */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		0AF9C1DF252D253500D3B5D9 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				0AF9C1E1252D257200D3B5D9 /* Bar.swift */,
-			);
-			path = Shapes;
 			sourceTree = "<group>";
 		};
 		0AF9C1EE252D2B4900D3B5D9 /* Repository */ = {
@@ -252,23 +290,6 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		AD4F1C6334EDA17C2CF13443 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D9B9F632D610A5BD4C866D95 /* Pods_JobAppTracker.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BE1BDCE9781E57A77183DE6B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4C7B6D77E730C699D63781D8 /* Pods-JobAppTracker.debug.xcconfig */,
-				CB610FDBE1139892F3240045 /* Pods-JobAppTracker.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,17 +297,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AF9C1BC252D22DE00D3B5D9 /* Build configuration list for PBXNativeTarget "JobAppTracker" */;
 			buildPhases = (
-				0C1595055E75ABF3861757ED /* [CP] Check Pods Manifest.lock */,
 				0AF9C1A9252D22DC00D3B5D9 /* Sources */,
 				0AF9C1AA252D22DC00D3B5D9 /* Frameworks */,
 				0AF9C1AB252D22DC00D3B5D9 /* Resources */,
-				32D972D8C4E23A3882A1BB7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JobAppTracker;
+			packageProductDependencies = (
+				0A042EFB25D6603100F92314 /* FirebaseAnalytics */,
+				0A042EFD25D6603100F92314 /* FirebaseFirestoreSwift-Beta */,
+				0A042EFF25D6603100F92314 /* FirebaseAuth */,
+				0A042F0125D6603100F92314 /* FirebaseFirestore */,
+			);
 			productName = JobAppTracker;
 			productReference = 0AF9C1AD252D22DC00D3B5D9 /* JobAppTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -314,6 +339,9 @@
 				Base,
 			);
 			mainGroup = 0AF9C1A4252D22DC00D3B5D9;
+			packageReferences = (
+				0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0AF9C1AE252D22DC00D3B5D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,48 +364,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0C1595055E75ABF3861757ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JobAppTracker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		32D972D8C4E23A3882A1BB7B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JobAppTracker/Pods-JobAppTracker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0AF9C1A9252D22DC00D3B5D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -385,29 +371,36 @@
 			files = (
 				0AB5B82A252E5DFF0021593B /* DetailScreen.swift in Sources */,
 				0AF9C1F0252D2B6400D3B5D9 /* JobRepository.swift in Sources */,
+				0A042EE025D6103900F92314 /* CustomTabBar.swift in Sources */,
 				0AC4A0BF253C108500249F33 /* NeumorphicCard.swift in Sources */,
 				0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */,
+				0A042EC225D5E6D200F92314 /* Unwrap.swift in Sources */,
 				0A112FD32533A54400B65DEF /* UpdateScreen.swift in Sources */,
 				0A112FEB2533BEC100B65DEF /* ApplicationStatus.swift in Sources */,
 				0AF9C1D1252D23B100D3B5D9 /* Color-Extension.swift in Sources */,
 				0AF9C1EC252D28EF00D3B5D9 /* JobListViewModel.swift in Sources */,
+				0A042EF125D6236100F92314 /* CreateNewBehavorialScreen.swift in Sources */,
 				0A1A2648252D67CA009BDDB9 /* SearchScreen.swift in Sources */,
 				0AF9C1E5252D258F00D3B5D9 /* TabItem.swift in Sources */,
-				0AF9C1E2252D257200D3B5D9 /* Bar.swift in Sources */,
+				0AE1B03025D50858000999B1 /* CustomTabBarScreen.swift in Sources */,
 				0AF9C1D4252D23D100D3B5D9 /* NeumorphicViewModifier.swift in Sources */,
 				0AF9C1DA252D242700D3B5D9 /* RingView.swift in Sources */,
 				0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */,
+				0AE1B03325D50877000999B1 /* FloatingActionMenu.swift in Sources */,
 				0A4CD23D2531712900E3B728 /* CheckboxToggleStyle.swift in Sources */,
 				0AF9C1CA252D235500D3B5D9 /* ApplicationsScreen.swift in Sources */,
-				0AF9C1E8252D25D000D3B5D9 /* TabItems.swift in Sources */,
-				0AF9C1C6252D232800D3B5D9 /* TabBarScreen.swift in Sources */,
-				0A1A264E252D7A36009BDDB9 /* AddJobAppScreen.swift in Sources */,
+				0A042EE825D6161E00F92314 /* RaisedAddButton.swift in Sources */,
+				0A042EB725D5A3B900F92314 /* Image-Extension.swift in Sources */,
+				0A1A264E252D7A36009BDDB9 /* CreateNewJobAppScreen.swift in Sources */,
+				0AE1B03925D50897000999B1 /* Router.swift in Sources */,
 				0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */,
 				0A1BE1CB25341CAD00F2A1CA /* FABStyle.swift in Sources */,
-				0AF9C1D7252D241200D3B5D9 /* JobCard.swift in Sources */,
+				0AF9C1D7252D241200D3B5D9 /* JobCardView.swift in Sources */,
+				0A042EBF25D5C72C00F92314 /* VisualEffectBlur.swift in Sources */,
+				0AE1B03625D5088A000999B1 /* TabBarButton.swift in Sources */,
 				0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */,
 				0AF9C1CD252D237800D3B5D9 /* Job.swift in Sources */,
-				0AF9C1DD252D252000D3B5D9 /* TabBar.swift in Sources */,
+				0A042EF725D62E8C00F92314 /* CreateNewJobAppViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +525,6 @@
 		};
 		0AF9C1BD252D22DE00D3B5D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C7B6D77E730C699D63781D8 /* Pods-JobAppTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -555,7 +547,6 @@
 		};
 		0AF9C1BE252D22DE00D3B5D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB610FDBE1139892F3240045 /* Pods-JobAppTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -598,6 +589,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A042EFB25D6603100F92314 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0A042EFD25D6603100F92314 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		0A042EFF25D6603100F92314 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0A042F0125D6603100F92314 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0AF9C1A5252D22DC00D3B5D9 /* Project object */;
 }

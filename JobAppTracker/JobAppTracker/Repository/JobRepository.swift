@@ -12,11 +12,13 @@ import FirebaseFirestoreSwift
 
 class JobRepository: ObservableObject {
     
+    static let shared = JobRepository()
+    
     let db = Firestore.firestore()
     
     @Published var jobs = [Job]()
     
-    init() {
+    private init() {
         loadData()
     }
     

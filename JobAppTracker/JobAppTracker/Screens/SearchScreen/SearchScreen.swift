@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SearchScreen: View {
-    
     @State private var searchTerm = ""
     
     var body: some View {
@@ -21,7 +20,6 @@ struct SearchScreen: View {
             .modifier(TextFieldModifier())
             .onTapGesture(count: 1, perform: {})
             
-            Spacer(minLength:70)
         }
         .padding()
         .contentShape(Rectangle())
@@ -30,7 +28,6 @@ struct SearchScreen: View {
     }
     
     private func endEditing() {
-        print("tapped anywhere")
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

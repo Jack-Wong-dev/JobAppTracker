@@ -12,9 +12,14 @@ struct JobAppTrackerApp: App {
     @UIApplicationDelegateAdaptor(MyAppDelegate.self) var appDelegate
     @Environment(\.scenePhase) var scenePhase
     
+    @StateObject private var router = Router()
+    @StateObject private var jobRepository = JobRepository.shared
+    
     var body: some Scene {
         WindowGroup {
-            TabBarScreen()
+            CustomTabBarScreen()
+                .environmentObject(router)
+                .environmentObject(jobRepository)
         }
     }
 }

@@ -16,7 +16,7 @@ enum UserIntent: Int, Identifiable {
 
 class JobListViewModel: ObservableObject {
     
-    @Published var jobRepository = JobRepository()
+//    @Published var jobRepository = JobRepository()
     @Published var jobsList = [Job]()
     @Published var selectedJob: Job? = nil
     @Published var intent: UserIntent? = nil
@@ -24,24 +24,23 @@ class JobListViewModel: ObservableObject {
     @Published var lastSelectedJob: Job?
     
     private var cancellables = Set<AnyCancellable>()
-//    @Published var job =
     
     init() {
-        jobRepository.$jobs
+        JobRepository.shared.$jobs
             .assign(to: \.jobsList, on: self)
             .store(in: &cancellables)
     }
     
-    func addJob(job: Job) {
-        jobRepository.addJob(job)
-    }
+//    func addJob(job: Job) {
+//        JobRepository.shared.addJob(job)
+//    }
     
     func deleteJob(job: Job) {
-        jobRepository.deleteJob(job)
+        JobRepository.shared.deleteJob(job)
     }
     
     func updateJob(job: Job) {
-        jobRepository.updateJob(job)
+        JobRepository.shared.updateJob(job)
     }
 }
 
