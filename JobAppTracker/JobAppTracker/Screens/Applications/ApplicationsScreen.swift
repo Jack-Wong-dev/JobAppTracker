@@ -88,7 +88,7 @@ struct JobCard: View {
             jobListVM.lastSelectedJob = job
         }
   
-        withAnimation(.easeInOut) { router.showNavigation = false }
+        router.showNavigation = false 
     }
 }
 
