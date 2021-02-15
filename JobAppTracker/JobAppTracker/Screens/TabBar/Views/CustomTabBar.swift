@@ -9,24 +9,25 @@ import SwiftUI
 
 struct CustomTabBar: View {
     @EnvironmentObject var router: Router
-    @State private var showMenu = false
+    @EnvironmentObject var tabBarVM: TabBarViewModel
 
     var body: some View {
         ZStack {
             HStack {
                 TabBarButton(screen: .home)
+                
                 TabBarButton(screen: .search)
                 
-                RaisedAddButton(showMenu: $showMenu)
+                RaisedAddButton()
                 
                 TabBarButton(screen: .favorite)
+                
                 TabBarButton(screen: .profile)
             }
             .frame(maxWidth: .infinity)
             .background(Color.systemBackground.ignoresSafeArea(edges: [.horizontal, .bottom]))
-            .transition(.move(edge: .bottom))
             
-            if showMenu {
+            if tabBarVM.showMenu {
                 FloatingActionMenu()
             }
         }

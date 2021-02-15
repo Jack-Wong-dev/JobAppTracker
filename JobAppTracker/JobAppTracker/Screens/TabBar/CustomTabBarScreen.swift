@@ -7,8 +7,13 @@
 
 import SwiftUI
 
+class TabBarViewModel: ObservableObject {
+    @Published var showMenu = false
+}
+
 struct CustomTabBarScreen: View {
     @EnvironmentObject var router: Router
+    @StateObject private var tabBarVM = TabBarViewModel()
     @State private var tabBarHeight: CGFloat?
     
     var body: some View {
@@ -16,9 +21,17 @@ struct CustomTabBarScreen: View {
             VStack {
                 CurrentScreen()
                 Spacer().frame(height: tabBarHeight)
-            }
             
-            if router.showTabBar {
+            }
+            .blur(radius: tabBarVM.showMenu ? 3.0 : 0)
+         
+            if tabBarVM.showMenu {
+                Color.clear.ignoresSafeArea()
+                    .contentShape(Rectangle())
+                    .onTapGesture(perform: closeFABMenu)
+            }
+                        
+            if router.showNavigation {
                 CustomTabBar()
                     .background(
                         GeometryReader { proxy in
@@ -35,6 +48,13 @@ struct CustomTabBarScreen: View {
             tabBarHeight = $0
         }
         .environmentObject(router)
+        .environmentObject(tabBarVM)
+    }
+    
+    private func closeFABMenu() {
+        withAnimation {
+            tabBarVM.showMenu = false
+        }
     }
 }
 

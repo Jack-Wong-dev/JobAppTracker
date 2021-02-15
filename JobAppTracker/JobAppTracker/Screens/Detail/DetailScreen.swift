@@ -165,8 +165,8 @@ struct DetailScreen: View {
     }
     
     private func revealTabBar() {
-        withAnimation(Animation.easeInOut.delay(0.2)) {
-            router.showTabBar = true
+        withAnimation(Animation.easeOut.delay(0.2)) {
+            router.showNavigation = true
         }
     }
 }

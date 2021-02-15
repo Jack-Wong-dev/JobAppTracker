@@ -68,7 +68,7 @@ struct UpdateScreen: View {
     private func updatePressed() {        
         jobListVM.updateJob(job: job)
         jobListVM.selectedJob = nil
-        router.showTabBar = true
+        router.showNavigation = true
         
         presentationMode.wrappedValue.dismiss()
     }

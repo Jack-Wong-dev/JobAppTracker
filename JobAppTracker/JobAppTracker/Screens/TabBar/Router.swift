@@ -10,7 +10,7 @@ import Combine
 
 final class Router: ObservableObject {
     @Published var currentScreen: Screen = .home
-    @Published var showTabBar = true
+    @Published var showNavigation = true
 }
 
 enum Screen: String, Hashable {
