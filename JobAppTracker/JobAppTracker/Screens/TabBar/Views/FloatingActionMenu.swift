@@ -8,12 +8,9 @@
 import SwiftUI
 import Combine
 
-class FloatingActionMenuViewModel: ObservableObject {
-    @Published var selectedOption: FloatingMenuAction?
-}
 
 struct FloatingActionMenu: View {
-    @StateObject private var floatingActionMenuVM = FloatingActionMenuViewModel()
+    @EnvironmentObject private var router: Router
     @ScaledMetric private var imageSize: CGFloat = 48
     
     var body: some View {
@@ -26,7 +23,7 @@ struct FloatingActionMenu: View {
             
             FloatingActionMenuButton(systemName: "star.circle.fill", option: .newSTAR)
         }
-        .fullScreenCover(item: $floatingActionMenuVM.selectedOption) { option in
+        .fullScreenCover(item: $router.selectedOption) { option in
             switch option {
             case .newApplication:
                 CreateNewJobAppScreen()
@@ -34,7 +31,6 @@ struct FloatingActionMenu: View {
                 CreateNewBehavorialScreen()
             }
         }
-        .environmentObject(floatingActionMenuVM)
         .transition(.scale)
         .offset(y: -imageSize * 2)
     }
@@ -42,7 +38,7 @@ struct FloatingActionMenu: View {
 
 
 struct FloatingActionMenuButton: View {
-    @EnvironmentObject var floatingActionMenuVM: FloatingActionMenuViewModel
+    @EnvironmentObject var router: Router
     @ScaledMetric(relativeTo: .body) private var imageSize: CGFloat = 48
 
     let systemName: String
@@ -63,7 +59,7 @@ struct FloatingActionMenuButton: View {
     
     private func action() {
         print("full screen for \(option.rawValue)")
-        floatingActionMenuVM.selectedOption = option
+        router.selectedOption = option
     }
 }
 

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CustomTabBar: View {
     @EnvironmentObject var router: Router
-    @EnvironmentObject var tabBarVM: TabBarViewModel
 
     var body: some View {
         ZStack {
@@ -27,7 +26,7 @@ struct CustomTabBar: View {
             .frame(maxWidth: .infinity)
             .background(Color.systemBackground.ignoresSafeArea(edges: [.horizontal, .bottom]))
             
-            if tabBarVM.showMenu {
+            if router.showMenu {
                 FloatingActionMenu()
             }
         }

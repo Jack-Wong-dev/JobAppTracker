@@ -27,7 +27,7 @@ struct ApplicationsScreen: View {
                 }
                 .ignoresSafeArea()
             }  /* ZStack */
-            .blur(radius: jobSelected ? 3: 0)
+            .blur(radius: jobSelected ? 10: 0)
             .disabled(jobSelected)
             .overlay(
                 Unwrap(jobListVM.selectedJob) { job in
@@ -83,12 +83,12 @@ struct JobCard: View {
     }
     
     private func selectCard() {
+        router.showNavigation = false
+
         withAnimation(.easeOut) {
             jobListVM.selectedJob = job
             jobListVM.lastSelectedJob = job
         }
-  
-        router.showNavigation = false 
     }
 }
 

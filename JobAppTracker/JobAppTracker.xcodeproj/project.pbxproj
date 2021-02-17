@@ -29,6 +29,7 @@
 		0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B826252E5AF80021593B /* Date-Extension.swift */; };
 		0AB5B82A252E5DFF0021593B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B829252E5DFF0021593B /* DetailScreen.swift */; };
 		0AC4A0BF253C108500249F33 /* NeumorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */; };
+		0AD9590125DD9D8000444ED8 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9590025DD9D8000444ED8 /* TabBarViewModel.swift */; };
 		0AE1B03025D50858000999B1 /* CustomTabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */; };
 		0AE1B03325D50877000999B1 /* FloatingActionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */; };
 		0AE1B03625D5088A000999B1 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1B03525D5088A000999B1 /* TabBarButton.swift */; };
@@ -67,6 +68,7 @@
 		0AB5B826252E5AF80021593B /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		0AB5B829252E5DFF0021593B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicCard.swift; sourceTree = "<group>"; };
+		0AD9590025DD9D8000444ED8 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarScreen.swift; sourceTree = "<group>"; };
 		0AE1B03225D50877000999B1 /* FloatingActionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionMenu.swift; sourceTree = "<group>"; };
 		0AE1B03525D5088A000999B1 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0A042EDE25D6102100F92314 /* Views */,
 				0AE1B03825D50897000999B1 /* Router.swift */,
 				0AE1B02F25D50858000999B1 /* CustomTabBarScreen.swift */,
+				0AD9590025DD9D8000444ED8 /* TabBarViewModel.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				0AE1B03625D5088A000999B1 /* TabBarButton.swift in Sources */,
 				0AF9C1B1252D22DC00D3B5D9 /* JobAppTrackerApp.swift in Sources */,
 				0AF9C1CD252D237800D3B5D9 /* Job.swift in Sources */,
+				0AD9590125DD9D8000444ED8 /* TabBarViewModel.swift in Sources */,
 				0A042EF725D62E8C00F92314 /* CreateNewJobAppViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
