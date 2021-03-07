@@ -23,8 +23,9 @@ Job Application Tracker
 | --- | 
 |![iPad Pro 2020 Landscape - Dark](images/iPadPro2020DarkLandscape.png) |
 
-![](iphone.gif)
-![](ipad.gif)
+| ![](gifs/iphone.gif) | ![](gifs/ipad.gif) |
+| --- | --- |
+
 
 
 
