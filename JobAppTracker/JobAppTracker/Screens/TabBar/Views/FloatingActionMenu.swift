@@ -58,13 +58,12 @@ struct FloatingActionMenuButton: View {
     }
     
     private func action() {
-        print("full screen for \(option.rawValue)")
         router.selectedOption = option
     }
 }
 
-enum FloatingMenuAction: Int, Identifiable {
-    var id: Int { self.rawValue }
+enum FloatingMenuAction: String, Identifiable {
+    var id: String { self.rawValue }
     
     case newApplication
     case newSTAR

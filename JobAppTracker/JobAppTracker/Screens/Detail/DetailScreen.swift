@@ -62,6 +62,10 @@ struct DetailScreen: View {
                         .font(Font.callout.weight(.semibold))
                         .matchedGeometryEffect(id: "Status \(String(describing: job.id))", in: namespace)
                         
+                        if let address = job.url, let url = URL(string: address) {
+                            Link("Link to job", destination: url)
+                        }
+                        
                         if !job.notes.isEmpty {
                             Text(job.notes)
                                 .font(Font.body.weight(.semibold))
