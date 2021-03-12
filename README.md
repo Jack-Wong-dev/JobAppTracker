@@ -9,7 +9,7 @@ Job Application Tracker
 
 | iPhone Light Mode | iPhone Dark Mode |
 | --- | --- |
-| ![iPhone 11 Pro Light Mode](images/iPhone12ProLightMode.png) | ![iPad Pro 2020 Portrait - Dark](images/iPhone12ProDarkMode.png) |
+| ![iPhone 12 Pro Light Mode](images/iPhone12ProLightMode.png) | ![iPhone 12 Pro Dark Mode](images/iPhone12ProDarkMode.png) |
 
 | iPad Light Mode (Portrait) | iPad Dark Mode (Portrait) |
 | --- | --- |
