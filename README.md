@@ -3,7 +3,7 @@ Job Application Tracker
 
 ## Technologies Used
 * SwiftUI (https://developer.apple.com/documentation/swiftui)
-* Combine (https://firebase.google.com/docs)
+* Combine (https://developer.apple.com/documentation/combine)
 * Firebase Authentication (https://firebase.google.com/docs/auth)
 * Firebase Firestore (https://firebase.google.com/docs/firestore
 
