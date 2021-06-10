@@ -14,6 +14,9 @@ struct CustomTabBarScreen: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
+//            Color.background.ignoresSafeArea()
+            LinearGradient.background.ignoresSafeArea()
+            
             VStack {
                 CurrentScreen()
                 Spacer().frame(height: tabBarHeight)
@@ -39,7 +42,6 @@ struct CustomTabBarScreen: View {
                     )
             }
         }
-        .background(Color.background.ignoresSafeArea())
         .onPreferenceChange(TabBarPreferenceKey.self) {
             tabBarHeight = $0
         }

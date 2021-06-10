@@ -59,6 +59,7 @@ struct JobGridView: View {
                         .frame(height: 200)
                 }
             }  /* ForEach */
+            
         } /* LazyVGrid */
         .padding()
     }
