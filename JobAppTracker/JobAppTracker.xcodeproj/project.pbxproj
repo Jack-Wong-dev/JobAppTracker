@@ -14,7 +14,6 @@
 		0A042EE825D6161E00F92314 /* RaisedAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EE725D6161E00F92314 /* RaisedAddButton.swift */; };
 		0A042EF125D6236100F92314 /* CreateNewBehavorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */; };
 		0A042EF725D62E8C00F92314 /* CreateNewJobAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */; };
-		0A042EFC25D6603100F92314 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042EFB25D6603100F92314 /* FirebaseAnalytics */; };
 		0A042EFE25D6603100F92314 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042EFD25D6603100F92314 /* FirebaseFirestoreSwift-Beta */; };
 		0A042F0025D6603100F92314 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042EFF25D6603100F92314 /* FirebaseAuth */; };
 		0A042F0225D6603100F92314 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A042F0125D6603100F92314 /* FirebaseFirestore */; };
@@ -26,6 +25,7 @@
 		0A1A264E252D7A36009BDDB9 /* CreateNewJobAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */; };
 		0A1BE1CB25341CAD00F2A1CA /* FABStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1BE1CA25341CAD00F2A1CA /* FABStyle.swift */; };
 		0A4CD23D2531712900E3B728 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */; };
+		0A79AE6126729EC500DF689B /* LinearGradient+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A79AE6026729EC500DF689B /* LinearGradient+Extension.swift */; };
 		0AB5B827252E5AF80021593B /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B826252E5AF80021593B /* Date-Extension.swift */; };
 		0AB5B82A252E5DFF0021593B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B829252E5DFF0021593B /* DetailScreen.swift */; };
 		0AC4A0BF253C108500249F33 /* NeumorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */; };
@@ -65,6 +65,7 @@
 		0A1A264D252D7A36009BDDB9 /* CreateNewJobAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewJobAppScreen.swift; sourceTree = "<group>"; };
 		0A1BE1CA25341CAD00F2A1CA /* FABStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABStyle.swift; sourceTree = "<group>"; };
 		0A4CD23C2531712900E3B728 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		0A79AE6026729EC500DF689B /* LinearGradient+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Extension.swift"; sourceTree = "<group>"; };
 		0AB5B826252E5AF80021593B /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		0AB5B829252E5DFF0021593B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 		0AC4A0BE253C108400249F33 /* NeumorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicCard.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A042EFC25D6603100F92314 /* FirebaseAnalytics in Frameworks */,
 				0A042F0225D6603100F92314 /* FirebaseFirestore in Frameworks */,
 				0A042F0025D6603100F92314 /* FirebaseAuth in Frameworks */,
 				0A042EFE25D6603100F92314 /* FirebaseFirestoreSwift-Beta in Frameworks */,
@@ -278,6 +278,7 @@
 			children = (
 				0A042EB525D5A3AF00F92314 /* Extensions */,
 				0AF9C1D0252D23B100D3B5D9 /* Color-Extension.swift */,
+				0A79AE6026729EC500DF689B /* LinearGradient+Extension.swift */,
 				0AF9C1D3252D23D100D3B5D9 /* NeumorphicViewModifier.swift */,
 				0A1A264A252D6DD5009BDDB9 /* TextFieldViewModifier.swift */,
 				0AB5B826252E5AF80021593B /* Date-Extension.swift */,
@@ -310,7 +311,6 @@
 			);
 			name = JobAppTracker;
 			packageProductDependencies = (
-				0A042EFB25D6603100F92314 /* FirebaseAnalytics */,
 				0A042EFD25D6603100F92314 /* FirebaseFirestoreSwift-Beta */,
 				0A042EFF25D6603100F92314 /* FirebaseAuth */,
 				0A042F0125D6603100F92314 /* FirebaseFirestore */,
@@ -398,6 +398,7 @@
 				0AE1B03925D50897000999B1 /* Router.swift in Sources */,
 				0A1A264B252D6DD6009BDDB9 /* TextFieldViewModifier.swift in Sources */,
 				0A1BE1CB25341CAD00F2A1CA /* FABStyle.swift in Sources */,
+				0A79AE6126729EC500DF689B /* LinearGradient+Extension.swift in Sources */,
 				0AF9C1D7252D241200D3B5D9 /* JobCardView.swift in Sources */,
 				0A042EBF25D5C72C00F92314 /* VisualEffectBlur.swift in Sources */,
 				0AE1B03625D5088A000999B1 /* TabBarButton.swift in Sources */,
@@ -462,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -517,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -537,7 +538,7 @@
 				DEVELOPMENT_TEAM = 8FR9D6557V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = JobAppTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +560,7 @@
 				DEVELOPMENT_TEAM = 8FR9D6557V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = JobAppTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,11 +607,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A042EFB25D6603100F92314 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
 		0A042EFD25D6603100F92314 /* FirebaseFirestoreSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0A042EFA25D6603100F92314 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
