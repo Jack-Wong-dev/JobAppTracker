@@ -14,6 +14,7 @@
 		0A042EE825D6161E00F92314 /* RaisedAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EE725D6161E00F92314 /* RaisedAddButton.swift */; };
 		0A042EF125D6236100F92314 /* CreateNewBehavorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */; };
 		0A042EF725D62E8C00F92314 /* CreateNewJobAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */; };
+		0A0AE7C0267E9C2C0001F950 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A0AE7BF267E9C2C0001F950 /* Launch Screen.storyboard */; };
 		0A112FD32533A54400B65DEF /* UpdateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FD22533A54400B65DEF /* UpdateScreen.swift */; };
 		0A112FEB2533BEC100B65DEF /* ApplicationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */; };
 		0A1A2643252D636A009BDDB9 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		0A042EE725D6161E00F92314 /* RaisedAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedAddButton.swift; sourceTree = "<group>"; };
 		0A042EF025D6236100F92314 /* CreateNewBehavorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewBehavorialScreen.swift; sourceTree = "<group>"; };
 		0A042EF625D62E8C00F92314 /* CreateNewJobAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewJobAppViewModel.swift; sourceTree = "<group>"; };
+		0A0AE7BF267E9C2C0001F950 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0A112FD22533A54400B65DEF /* UpdateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScreen.swift; sourceTree = "<group>"; };
 		0A112FEA2533BEC100B65DEF /* ApplicationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatus.swift; sourceTree = "<group>"; };
 		0A1A2642252D636A009BDDB9 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		0AF9C1A4252D22DC00D3B5D9 = {
 			isa = PBXGroup;
 			children = (
+				0A0AE7BF267E9C2C0001F950 /* Launch Screen.storyboard */,
 				0AF9C1AF252D22DC00D3B5D9 /* JobAppTracker */,
 				0AF9C1AE252D22DC00D3B5D9 /* Products */,
 			);
@@ -364,6 +367,7 @@
 			files = (
 				0AF9C1B8252D22DE00D3B5D9 /* Preview Assets.xcassets in Resources */,
 				0AF9C1B5252D22DE00D3B5D9 /* Assets.xcassets in Resources */,
+				0A0AE7C0267E9C2C0001F950 /* Launch Screen.storyboard in Resources */,
 				0AF9C1F7252D535600D3B5D9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
